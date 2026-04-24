@@ -1,0 +1,65 @@
+{
+  "generated_at": "2026-04-24T04:45:33.156574+00:00",
+  "lock_path": "/home/jinwang/workspace/hermes-safe-restart-bundle/customization-lock.yaml",
+  "snapshot_path": "/home/jinwang/workspace/hermes-safe-restart-bundle/reports/customization-lock.snapshot.json",
+  "hermes_repo": "/home/jinwang/.hermes/hermes-agent",
+  "policies": {
+    "require_pristine_hermes_checkout": true,
+    "require_origin_main_tree_match": true,
+    "forbid_hermes_source_mutation_bundles": true,
+    "block_unknown_untracked": true,
+    "require_preflight_before_execute": true,
+    "require_verify_before_restart": true,
+    "default_restart_mode": "conservative-reset",
+    "allow_unsafe_marker_restart": false
+  },
+  "managed_hermes_paths": [],
+  "ignored_untracked_paths": [],
+  "hermes_head": "6fdbf2f2d76cf37393e657bf37ceda3d84589200",
+  "origin_main_head": "6fdbf2f2d76cf37393e657bf37ceda3d84589200",
+  "origin_main_tree_diff": [],
+  "hermes_status": [],
+  "unmanaged_dirty_paths": [],
+  "disallowed_source_mutation_targets": [],
+  "disallowed_managed_hermes_path_bundles": [],
+  "bundle_reports": [
+    {
+      "bundle_id": "discord-voice-stt-enhance",
+      "manifest_path": "/home/jinwang/workspace/hermes-safe-restart-bundle/manifests/bundles/discord-voice-stt-enhance.yaml",
+      "expected_source_digest": "4526a6b67a79bf3e52373192096cd37380bb9e2d4eaf5ed105df1798ca1d09cd",
+      "current_source_digest": "4526a6b67a79bf3e52373192096cd37380bb9e2d4eaf5ed105df1798ca1d09cd",
+      "mismatch": false,
+      "target": "external-runtime",
+      "managed_hermes_paths": []
+    },
+    {
+      "bundle_id": "styled-voice",
+      "manifest_path": "/home/jinwang/workspace/hermes-safe-restart-bundle/manifests/bundles/styled-voice.yaml",
+      "expected_source_digest": "8b6d936cf06206686a1dba6c1f7cf9c5b6c3fb46b6277b3c1f5aa51edabad97f",
+      "current_source_digest": "8b6d936cf06206686a1dba6c1f7cf9c5b6c3fb46b6277b3c1f5aa51edabad97f",
+      "mismatch": false,
+      "target": "external-skill",
+      "managed_hermes_paths": []
+    },
+    {
+      "bundle_id": "hermes-safe-restart-bundle",
+      "manifest_path": "/home/jinwang/workspace/hermes-safe-restart-bundle/manifests/bundles/hermes-safe-restart-bundle.yaml",
+      "expected_source_digest": "120513b2e8fcfb2f781287314c73388698d500522634d7d95fa989e4a20c2e2e",
+      "current_source_digest": "120513b2e8fcfb2f781287314c73388698d500522634d7d95fa989e4a20c2e2e",
+      "mismatch": false,
+      "target": "ops-skill",
+      "managed_hermes_paths": []
+    },
+    {
+      "bundle_id": "jinwang-jarvis",
+      "manifest_path": "/home/jinwang/workspace/hermes-safe-restart-bundle/manifests/bundles/jinwang-jarvis.yaml",
+      "expected_source_digest": "bd5a0410d664764fe8c7acc4f891db7c9329af01f86c149f108704eea967b9f8",
+      "current_source_digest": "bd5a0410d664764fe8c7acc4f891db7c9329af01f86c149f108704eea967b9f8",
+      "mismatch": false,
+      "target": "sidecar",
+      "managed_hermes_paths": []
+    }
+  ],
+  "blockers": [],
+  "ready": true
+}

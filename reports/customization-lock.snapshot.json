@@ -1,0 +1,642 @@
+{
+  "generated_at": "2026-04-24T04:45:32.698620+00:00",
+  "lock_path": "/home/jinwang/workspace/hermes-safe-restart-bundle/customization-lock.yaml",
+  "hermes_repo": "/home/jinwang/.hermes/hermes-agent",
+  "policies": {
+    "require_pristine_hermes_checkout": true,
+    "require_origin_main_tree_match": true,
+    "forbid_hermes_source_mutation_bundles": true,
+    "block_unknown_untracked": true,
+    "require_preflight_before_execute": true,
+    "require_verify_before_restart": true,
+    "default_restart_mode": "conservative-reset",
+    "allow_unsafe_marker_restart": false
+  },
+  "bundles": [
+    {
+      "bundle_id": "discord-voice-stt-enhance",
+      "display_name": "Discord Voice STT Enhance",
+      "manifest_path": "/home/jinwang/workspace/hermes-safe-restart-bundle/manifests/bundles/discord-voice-stt-enhance.yaml",
+      "repo_path": "/home/jinwang/workspace/discord-voice-stt-enhance",
+      "git_head": "fb226935a0d8c37eb380a74f0c70007ea499f641",
+      "source_digest": "4526a6b67a79bf3e52373192096cd37380bb9e2d4eaf5ed105df1798ca1d09cd",
+      "file_count": 23,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "b0ef2ea2b1104b904fa63269a4aa5a669f920d42a0c69518f79506e0b9c15e3e"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "d01a8f5151da30495146b8cc6015f6855914a1729026409763bcb0932c9bb1aa"
+        },
+        {
+          "path": "references/architecture.md",
+          "sha256": "ba647290c0b7ba4b0cc3632ad9e76441fc9f83ba8347de862dfe3acafdd16d92"
+        },
+        {
+          "path": "references/operations.md",
+          "sha256": "d869d929c56d3d873cc43739e1d98ccac4534227078b4b7a8f191dc6dd70d752"
+        },
+        {
+          "path": "runtime/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "runtime/client.py",
+          "sha256": "bdbfa9f3c1f808a70c9b8d4789bea47848aa3cf0e878dd1d96aabbbe3fbeedc4"
+        },
+        {
+          "path": "runtime/healthcheck-windows.bat",
+          "sha256": "5e7ce7d53bac4cdb0c19b5b1986c49b1c58489aa7659149a83f727c2ad9bfd4c"
+        },
+        {
+          "path": "runtime/helpers.py",
+          "sha256": "537be5295f9e1208151194c95414805c2eb4f8c6f73c61dd5c45d2347f0a9213"
+        },
+        {
+          "path": "runtime/launch-windows.bat",
+          "sha256": "ad3808e24dd8fb3f103c6233c0b2e440ffed09a3dad8b3bb3e828baa5b6aee19"
+        },
+        {
+          "path": "runtime/local-stt.env.example",
+          "sha256": "babc0bd6d438cfd3b500b694ab5fe13f92bb0d34914675c060920528999568ad"
+        },
+        {
+          "path": "runtime/server.py",
+          "sha256": "7b454a62afb77f2040d27a50450b4e26c2ce7cc61d1068c6c71883f3a5f302de"
+        },
+        {
+          "path": "runtime/setup-windows.bat",
+          "sha256": "e85da6b497ce698bf5781352fab12407111ec4c7aa305e073f967a79a55eb7fc"
+        },
+        {
+          "path": "runtime/stop-windows.bat",
+          "sha256": "9e4ff78010f259ff19e3a30f2a28940d7cd27101dfef220269cb769676c889d3"
+        },
+        {
+          "path": "scripts/apply-hermes-patch.sh",
+          "sha256": "0c676d38309bf450bf532467ea42f8d83c8f650ebb54d6a1528b78bae3005f8a"
+        },
+        {
+          "path": "scripts/configure-hermes-local-stt.sh",
+          "sha256": "b217c939c414db748b5e7502582828c60268738823b88748c504622f8d22a9a6"
+        },
+        {
+          "path": "scripts/export-hermes-patches.sh",
+          "sha256": "0799cfaca8050a5ab1f2b7fafbfde0801155f66739fb44bae8979edc7d3b8252"
+        },
+        {
+          "path": "scripts/install.sh",
+          "sha256": "6d78f54611c7b38abf75517d3bc3e2487ae24e21381d1ea4da905959dd359bf5"
+        },
+        {
+          "path": "scripts/verify.sh",
+          "sha256": "ea491180c6fdc03a62e4a7b05c692d5f87d5341582586b48cb52fbfe51cc9446"
+        },
+        {
+          "path": "service/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "service/render.py",
+          "sha256": "4efcc1cbaa45e2d5c0343cd557ed67759266e24e5fbb47e52b7d044f926a6f92"
+        },
+        {
+          "path": "tests/conftest.py",
+          "sha256": "0cb67ba91674c07e557440292720aa3c3c111f4c41b7db1f4d219a7c68dc6f52"
+        },
+        {
+          "path": "tests/test_runtime_helpers.py",
+          "sha256": "e0687d73662a7fd07f30785df1d642974d4714e7f6ba6c9a9f594164f8948858"
+        },
+        {
+          "path": "tests/test_service_render.py",
+          "sha256": "60c71c2585d19a3ad1bb6eff8152ba1fc278eeb74db765be4c62afbacf41dd63"
+        }
+      ],
+      "apply_order": 10,
+      "target": "external-runtime",
+      "install_script": "/home/jinwang/workspace/discord-voice-stt-enhance/scripts/install.sh",
+      "verify_script": "/home/jinwang/workspace/discord-voice-stt-enhance/scripts/verify.sh",
+      "managed_config_paths": [
+        "~/.hermes/config.yaml"
+      ],
+      "managed_runtime_paths": [
+        "~/.config/systemd/user/hermes-local-stt.service"
+      ],
+      "managed_hermes_paths": []
+    },
+    {
+      "bundle_id": "styled-voice",
+      "display_name": "Styled Voice",
+      "manifest_path": "/home/jinwang/workspace/hermes-safe-restart-bundle/manifests/bundles/styled-voice.yaml",
+      "repo_path": "/home/jinwang/workspace/styled-voice",
+      "git_head": "1a6ff590555dbfdb73f090d548040224380b0fa2",
+      "source_digest": "8b6d936cf06206686a1dba6c1f7cf9c5b6c3fb46b6277b3c1f5aa51edabad97f",
+      "file_count": 10,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "869f94d01a65e2bcbb5f6ff64a05c51d80a1c9250ad29150291f85dbb4f9ee39"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "38cbe48d808943c66bc26cc2259593fe39aa29b3f55be66a98d9e83b5c34a56c"
+        },
+        {
+          "path": "references/architecture.md",
+          "sha256": "f290ac2ec36109e3b78f9130f7084a70d3933f60954d0b12098a960a7649629c"
+        },
+        {
+          "path": "references/operations.md",
+          "sha256": "f4b4a7fde915c05aa08c17926800e8d18075cb8b6cc2a36afaf44e946bebebf3"
+        },
+        {
+          "path": "references/v1.1-handoff.md",
+          "sha256": "ad10d808d90f7b32ff587fa8b29f2cda481fc7686baccd634808ca880667405f"
+        },
+        {
+          "path": "scripts/apply-hermes-patch.sh",
+          "sha256": "0936026bb862081faefba6dfa286c6b9f1b41ea0ca07a0d9cd0d3be3a6f1fd79"
+        },
+        {
+          "path": "scripts/export-hermes-patch.sh",
+          "sha256": "5e5df33a025c5bae3bf7d19695027e6cf05042e3387fbfd656748f5d29c8bfe0"
+        },
+        {
+          "path": "scripts/install.sh",
+          "sha256": "cff60637b61fb53ff46c8ee3536ecb745ff571d28bac50135773d5d3dfffc576"
+        },
+        {
+          "path": "scripts/verify.sh",
+          "sha256": "42c3b2527b1a4ca392346b756b2c48a9734b76fd53a86dffc45279d53eac360f"
+        },
+        {
+          "path": "tests/test_styled_voice_request.py",
+          "sha256": "3f87d2586f1914a439d84ae3af622647a63dc2e7199c9b2026b2b3d3607f2767"
+        }
+      ],
+      "apply_order": 20,
+      "target": "external-skill",
+      "install_script": "/home/jinwang/workspace/styled-voice/scripts/install.sh",
+      "verify_script": "/home/jinwang/workspace/styled-voice/scripts/verify.sh",
+      "managed_config_paths": [
+        "~/.hermes/config.yaml"
+      ],
+      "managed_runtime_paths": [],
+      "managed_hermes_paths": []
+    },
+    {
+      "bundle_id": "hermes-safe-restart-bundle",
+      "display_name": "Hermes Safe Restart Bundle",
+      "manifest_path": "/home/jinwang/workspace/hermes-safe-restart-bundle/manifests/bundles/hermes-safe-restart-bundle.yaml",
+      "repo_path": "/home/jinwang/workspace/hermes-safe-restart-bundle",
+      "git_head": null,
+      "source_digest": "120513b2e8fcfb2f781287314c73388698d500522634d7d95fa989e4a20c2e2e",
+      "file_count": 15,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "5c277ce25a504aa2a02e57b28cd42245bb1f01c212576035d78440d823211df2"
+        },
+        {
+          "path": "SKILL.md",
+          "sha256": "fc32f8225ddc6b2dedfa1b5b7085796bf525ab39ac9e57362e0162bf0c8f15c2"
+        },
+        {
+          "path": "docs/plans/2026-04-24-hermes-update-assurance-framework.md",
+          "sha256": "12913f4d943514037faece6fe3e2110edea3d868db35563b5b5aed9d85e08360"
+        },
+        {
+          "path": "manifests/bundles/discord-voice-stt-enhance.yaml",
+          "sha256": "8d28a9d6396e8d08614c4eae04fafaeb48ff92fb3eaca63569ef7507bf71a53b"
+        },
+        {
+          "path": "manifests/bundles/hermes-local-overrides.yaml",
+          "sha256": "a0112425c2268d698269fd884000acf8331ca594055312d655e100d68270607f"
+        },
+        {
+          "path": "manifests/bundles/hermes-safe-restart-bundle.yaml",
+          "sha256": "ff036639b58a3fbd80a8e13426ff05942aed17b30c23b03dd5c048aa0c6f6c85"
+        },
+        {
+          "path": "manifests/bundles/jinwang-jarvis.yaml",
+          "sha256": "e494d1f9499481021fa6856bd83e7c450dba4b8cd88295b4de7791e029b60463"
+        },
+        {
+          "path": "manifests/bundles/styled-voice.yaml",
+          "sha256": "62d60dfe2d646c024ea6665b2e653589a3ea9190a17f2258dcc9c95327d9e22f"
+        },
+        {
+          "path": "references/reapply-plan-2026-04-18.md",
+          "sha256": "9cb69013629ce645eb6ace05b4fffb2a2a4b29976b4170fa84206e2b18d434f6"
+        },
+        {
+          "path": "scripts/apply-hermes-patch.sh",
+          "sha256": "5901cb37ce5d41355a77a442e8ca6e44c9309f3eec981bbf2f4ba2fa0c302b9c"
+        },
+        {
+          "path": "scripts/export-hermes-local-overrides-patch.sh",
+          "sha256": "027daf0fafbd8406a05cfe419a08ad4a7690ba7e5c262933bbf971dbde37bce5"
+        },
+        {
+          "path": "scripts/export-hermes-safe-restart-patch.sh",
+          "sha256": "1c7b05333dc44d7bf3ad85123a5bb9b927be95411e7defa1af49d689167e524a"
+        },
+        {
+          "path": "scripts/hermes-agent-update-all-bundles.sh",
+          "sha256": "68af5733ea5cbb7221afc56f4e6524b6bbb012316ed925ba204ce4a76627255c"
+        },
+        {
+          "path": "scripts/install.sh",
+          "sha256": "0c0866b57b38741095cbf916d38b0d8bc2db139181469371f219e0fc3e627530"
+        },
+        {
+          "path": "scripts/verify.sh",
+          "sha256": "5301bc89e22bb39b26b63ded9ad7ced0c58e0d2bb5bf4b580f9c03a6fc2a8daa"
+        }
+      ],
+      "apply_order": 30,
+      "target": "ops-skill",
+      "install_script": "/home/jinwang/workspace/hermes-safe-restart-bundle/scripts/install.sh",
+      "verify_script": "/home/jinwang/workspace/hermes-safe-restart-bundle/scripts/verify.sh",
+      "managed_config_paths": [
+        "~/.hermes/config.yaml"
+      ],
+      "managed_runtime_paths": [],
+      "managed_hermes_paths": []
+    },
+    {
+      "bundle_id": "jinwang-jarvis",
+      "display_name": "Jinwang Jarvis",
+      "manifest_path": "/home/jinwang/workspace/hermes-safe-restart-bundle/manifests/bundles/jinwang-jarvis.yaml",
+      "repo_path": "/home/jinwang/workspace/jinwang-jarvis",
+      "git_head": "06ce81f7e0241d04696c723ac47fb8bdfecffd4c",
+      "source_digest": "bd5a0410d664764fe8c7acc4f891db7c9329af01f86c149f108704eea967b9f8",
+      "file_count": 87,
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "9f81fd1dd1364ceb3e2efae1a07680c65f0c2b41782456e064b9f011abced5b2"
+        },
+        {
+          "path": "config/pipeline.yaml",
+          "sha256": "80d9207cbe005cff6bae03f9d73e9523cdc9c022e7edf8e180d792e0e69adbba"
+        },
+        {
+          "path": "config/watch-sources/analysis/hpcwire.yaml",
+          "sha256": "8b091dd596ebcf61d455c188320c2cf59a0e7c595b11865d386173e0c1fe6f63"
+        },
+        {
+          "path": "config/watch-sources/analysis/semianalysis.yaml",
+          "sha256": "4a40f2e1ac7f0664caa40e01170020aef3673132e02a75c64cb4db4af3d217de"
+        },
+        {
+          "path": "config/watch-sources/official/MANIFEST.yaml",
+          "sha256": "b3e90e66f23f45b7d1798787311f5868a083938c9dfce4bd079c013287c5d392"
+        },
+        {
+          "path": "config/watch-sources/official/anthropic-news.yaml",
+          "sha256": "f66d9ceb9ab1ae463146d56972f04480cb5222c03ed8bbd559a589ec88fc2ccc"
+        },
+        {
+          "path": "config/watch-sources/official/anthropic-x.yaml",
+          "sha256": "16a0280c137c4b12095f1ad181c989490254b0b2a6f1cf663d4c51ef880d6ef3"
+        },
+        {
+          "path": "config/watch-sources/official/apple-ml-research.yaml",
+          "sha256": "367a8e3eacc09941d0bc73cd5f0164d27e0eafe0e107386135fead24ea4f2844"
+        },
+        {
+          "path": "config/watch-sources/official/apple-newsroom.yaml",
+          "sha256": "1926ad67a819c58c9f50f7c28200ab270240f7d0a2f189ff39caa60609cf84b5"
+        },
+        {
+          "path": "config/watch-sources/official/apple-x.yaml",
+          "sha256": "992ce6559745a59593371827bfa7aaa27f9e0b3f4692750251412ff14abff3be"
+        },
+        {
+          "path": "config/watch-sources/official/aws-ml-blog.yaml",
+          "sha256": "45d340b883dd6b31eab2ee4e2235c00c1480f974c95e5079bd6c938afb131df2"
+        },
+        {
+          "path": "config/watch-sources/official/azure-blog.yaml",
+          "sha256": "c38d23b719a7165993040bc01b63e6eca7f492fd66b9af54ae142026f173f416"
+        },
+        {
+          "path": "config/watch-sources/official/broadcom-news.yaml",
+          "sha256": "9189406aec90a301506f48cc0790e6efa7093d01c5ded99779228b749d306692"
+        },
+        {
+          "path": "config/watch-sources/official/cisco-cloud.yaml",
+          "sha256": "0d68debe4d60d77f6f58b3f8eeaf9d2d67b72990c1ce7222c651559dbaf38316"
+        },
+        {
+          "path": "config/watch-sources/official/cloudflare-ai.yaml",
+          "sha256": "75da9a19dafefc8108277c4ed40317a00e7cac31f57512ea2277194a951053ae"
+        },
+        {
+          "path": "config/watch-sources/official/deepmind-blog.yaml",
+          "sha256": "983e821cfa425be6a7b199812a56091171585eaa8fbee7b15e6680902d9b54f7"
+        },
+        {
+          "path": "config/watch-sources/official/google-ai-x.yaml",
+          "sha256": "f4b41b16631bb50b0c2115c851225ce21a546f0201002d934669ccb7e4694cfa"
+        },
+        {
+          "path": "config/watch-sources/official/google-blog.yaml",
+          "sha256": "f82083de02c22b237cafd558e89c5b588ca736bb67c941415c0e68b1280966e1"
+        },
+        {
+          "path": "config/watch-sources/official/google-deepmind-x.yaml",
+          "sha256": "e4e985e92f1ad4c72e3027296d04b4a062fc96e03334a0d09b0efa6424aef268"
+        },
+        {
+          "path": "config/watch-sources/official/huggingface-blog.yaml",
+          "sha256": "655afbf0a5fd3665303d7fe46d245ded07bb0c10a043198e5b352859eb3352f3"
+        },
+        {
+          "path": "config/watch-sources/official/ibm-research.yaml",
+          "sha256": "b53166c3cb55ea0dbd8a092b1163bb3b1ef904056eb4594ca971c1186f3993b3"
+        },
+        {
+          "path": "config/watch-sources/official/ibm-x.yaml",
+          "sha256": "ee10d6d19cf7571c4edacbd0cc97673ad1e0edf636f5ea804529f59bebf816d9"
+        },
+        {
+          "path": "config/watch-sources/official/meta-ai-x.yaml",
+          "sha256": "bc0170892eed26ec2a8b081e45353aed019685f15420d1dbf8cfe91100b06eb5"
+        },
+        {
+          "path": "config/watch-sources/official/microsoft-blog.yaml",
+          "sha256": "6e219c6e3cc2dfa79a25a68bbbe1033e5a730d3ec4ea5c8098355f9832b539bb"
+        },
+        {
+          "path": "config/watch-sources/official/nvidia-ai-x.yaml",
+          "sha256": "6a1eb89a03dce6934eccb67853c61fbfd1929160a678ca6a4b3092c629500cba"
+        },
+        {
+          "path": "config/watch-sources/official/nvidia-blog.yaml",
+          "sha256": "926e556db798a16732d4aff33d64ab9c187d3ffc5eaeda3513566c9deea29592"
+        },
+        {
+          "path": "config/watch-sources/official/openai-news.yaml",
+          "sha256": "83721f83923aaa212d1ab1df3efb5837e00a101388ae7bca6217ff32e03b429e"
+        },
+        {
+          "path": "config/watch-sources/official/openai-x.yaml",
+          "sha256": "9d4b86de5533ee5bfd87826e63eb151f4cb3c71b093bd0ace392e5b7b632d4f1"
+        },
+        {
+          "path": "config/watch-sources/official/paloalto-blog.yaml",
+          "sha256": "ba80608c4b3e27e3ddd8d7ae8dcf42a12a394a8cacd85c6166def3459738e150"
+        },
+        {
+          "path": "config/watch-sources/official/samsung-ds-x.yaml",
+          "sha256": "761b462b069e642ddf36108240842e79abcc81a00d2f2bf30b18576ab4c077a2"
+        },
+        {
+          "path": "config/watch-sources/official/skhynix-newsroom.yaml",
+          "sha256": "ca084ce9103eda8aa04161ee740e8c0aa2252f62a445fe00af253574e3c01a1f"
+        },
+        {
+          "path": "config/watch-sources/official/skhynix-x.yaml",
+          "sha256": "4aa197246c419481922ffaade5df5a099a1de7a4b63b23d2391cf1665c9beeca"
+        },
+        {
+          "path": "config/watch-sources/official/together-ai-blog.yaml",
+          "sha256": "699b9bb11fb6488eada0d5deb2c8eb24326c2dd87af73012aaeaa484d31fc389"
+        },
+        {
+          "path": "config/watch-sources/reaction/geeknews.yaml",
+          "sha256": "891065f257736e1b7dd8512634bf1463074fb834232e6e5baa3a6dbce7e1fc47"
+        },
+        {
+          "path": "config/watch-sources/reaction/hackernews-topstories.yaml",
+          "sha256": "8c0b027f8224c9f343dace3304200ec4feea305c5fd0df991d59a10f52ebd48e"
+        },
+        {
+          "path": "config/watch-sources/reaction/reddit-localllama.yaml",
+          "sha256": "11b48e8ff03b2c06fc7bd66a743e425509c522ae8ddd9179eb8af227416efa18"
+        },
+        {
+          "path": "docs/cron.md",
+          "sha256": "f58e6f4d166afd5ee7cfb66de01b05ebe324fe45f19ae38515243a388cd2e992"
+        },
+        {
+          "path": "docs/plans/2026-04-20-all-mail-knowledge-lane.md",
+          "sha256": "704aef44625526d494c288d971944d893c9cd5603ee59a911d0eae27bf2bea6c"
+        },
+        {
+          "path": "docs/plans/2026-04-20-discord-approval-loop.md",
+          "sha256": "d2112ea42359adcb561d4cf75235960dc2a91df9e2edf9b60ec1137a80324108"
+        },
+        {
+          "path": "docs/plans/2026-04-23-hot-issue-company-watch.md",
+          "sha256": "ec399c5e48b400c95b869833d25cfb959b1df4475d43822d37e13f0babf14dfc"
+        },
+        {
+          "path": "docs/plans/2026-04-23-starter-source-registry.md",
+          "sha256": "0876cd7ff80797e3cb3a10f0c51641ad19a38e02e3f98ed1eeb9be6f8fb01b90"
+        },
+        {
+          "path": "docs/plans/2026-04-23-watch-redesign-codex-x.md",
+          "sha256": "bb9b8aeb378f7701e65ee1a385337ab3fccc770e796767a02d4bae115be9c981"
+        },
+        {
+          "path": "docs/plans/2026-04-23-watch-source-onboarding-skill.md",
+          "sha256": "63d4c23a7f735aa312e5dfbf5524ef0c45ab7767cb56611c3f66633348feafc6"
+        },
+        {
+          "path": "docs/playbooks.md",
+          "sha256": "999ab544e44172b9740cea1b63b1986738677d1348ecce03e36c94befceacb1e"
+        },
+        {
+          "path": "docs/productized-jarvis.en.md",
+          "sha256": "eb3cd68f616752f905b08688c2d40cd2202ef3d31e27b589323cc8487ab7d199"
+        },
+        {
+          "path": "docs/productized-jarvis.ko.md",
+          "sha256": "532fa2463c83921f96051d863a7d50705cd52b29794821e7470f79831edece20"
+        },
+        {
+          "path": "docs/public-guide.en.md",
+          "sha256": "57bfd10fda9ec8b21b28ff3ab756781c6eb5ceb09613278d976032346c64f90f"
+        },
+        {
+          "path": "docs/public-guide.ko.md",
+          "sha256": "041cb61f8082c7e7e475ec5462212409dcbf5b5465cf48dd3e03e6f7c0586bed"
+        },
+        {
+          "path": "docs/public-sync.md",
+          "sha256": "9426497fbbfdf74ce6a5c71168a0030d2cd1c11d4e463aaf6385e7bf7b91e205"
+        },
+        {
+          "path": "docs/schema.md",
+          "sha256": "df54ca19295a8c84140c3f45eadfa99e8a14f3ca30e930d6fed3ed6a3cb65a91"
+        },
+        {
+          "path": "pyproject.toml",
+          "sha256": "3d993c61e55a3e241473eb6ca7eb377fce25adca1c61487782aaa0da2a460c99"
+        },
+        {
+          "path": "scripts/install.sh",
+          "sha256": "17af09d67b1ff94d8b0d17ee329233db02d330fb8375c7ee054ce63d54730087"
+        },
+        {
+          "path": "scripts/verify.sh",
+          "sha256": "701a5c899342be95b01a08ff699718214973fbef85ec3978a139351bcdcaec80"
+        },
+        {
+          "path": "src/jinwang_jarvis/__init__.py",
+          "sha256": "33460eeafbd4eb35ab9d6eda6cf8920568014c40f52b6a201fd0b4043db5bb03"
+        },
+        {
+          "path": "src/jinwang_jarvis/backfill.py",
+          "sha256": "28c32c29debdf881ac0c007376361d40eb8cb115497bad66ea0f5fe9f7c93f1b"
+        },
+        {
+          "path": "src/jinwang_jarvis/bootstrap.py",
+          "sha256": "e7e35ee98adf3e890cfa76adc4c7f82925c9cc05d91c3f6759d47b59d33ac2b8"
+        },
+        {
+          "path": "src/jinwang_jarvis/briefing.py",
+          "sha256": "866696fd2668bb9b0b0f89c986e2be83e55b5db337ceb5a4c04cd1952a662522"
+        },
+        {
+          "path": "src/jinwang_jarvis/calendar.py",
+          "sha256": "dde2dd0d4fa34e15c89c874aed6e1ce97223b87adc8c647abe762da8b9253f6c"
+        },
+        {
+          "path": "src/jinwang_jarvis/classifier.py",
+          "sha256": "aecd0d83592d03356ae5cb7f9fb7a87d7e9cd8f143c4eb3abd8439087f30bce3"
+        },
+        {
+          "path": "src/jinwang_jarvis/cli.py",
+          "sha256": "5005e39a1e88ede572c4ad4afbefd5bb4d98ff585ea1dffafb813c05b484c5c1"
+        },
+        {
+          "path": "src/jinwang_jarvis/config.py",
+          "sha256": "5399d9475d271a9d2c29ce2fa6529ee3249b60ad34b5fb867bc516f3c349b615"
+        },
+        {
+          "path": "src/jinwang_jarvis/digest.py",
+          "sha256": "860a7916cb888ee42ad35eb149647a38bf31801640df7a568e74d49f827dda9d"
+        },
+        {
+          "path": "src/jinwang_jarvis/feedback.py",
+          "sha256": "63070389fce6339251b9d19005304660c6384fac6927da9c26f31c14ee4624f8"
+        },
+        {
+          "path": "src/jinwang_jarvis/intelligence.py",
+          "sha256": "c37e7bb0a866adecc1b1236bc2b1eca598ba7a856668b0a7807fcb54fdc75f03"
+        },
+        {
+          "path": "src/jinwang_jarvis/knowledge.py",
+          "sha256": "63d1378cfb918d631a4976174884913b4952054fb3ed1edbc92e6b3fa027dd7b"
+        },
+        {
+          "path": "src/jinwang_jarvis/mail.py",
+          "sha256": "0f2a0423481f6384e0cd2fb48383634ec02c066694459f94fb9e8177ac0d0751"
+        },
+        {
+          "path": "src/jinwang_jarvis/proposals.py",
+          "sha256": "5e8380e398da402c04f634bf88e708644e048a43d3202ae5fce2e566755600ba"
+        },
+        {
+          "path": "src/jinwang_jarvis/review.py",
+          "sha256": "7aa1ccb4b2d0611ccb18e7b9b13b224e2d778b8cd18e7aa75d291b1076bd4208"
+        },
+        {
+          "path": "src/jinwang_jarvis/runtime.py",
+          "sha256": "7cf89ac12232ccf1cbb3f150cfdcf02a0fecb4f00f8402854c16a2e6cdc89d31"
+        },
+        {
+          "path": "src/jinwang_jarvis/watch.py",
+          "sha256": "7d02adafec674f1d6d1abba9215b8da993db428501b4fbfce22044bdef90f677"
+        },
+        {
+          "path": "tests/conftest.py",
+          "sha256": "d3fcf5967d190a1f82ab123c198694dc3b4ae0866936fafce7a38fe5a13f5bf2"
+        },
+        {
+          "path": "tests/test_bootstrap.py",
+          "sha256": "4c9c1e65bc96ffcd3221fe6d515cd17225f3d5e7baa1a6df03b89245a782eed2"
+        },
+        {
+          "path": "tests/test_briefing.py",
+          "sha256": "b8902579b67b8407483cff5605c90bdf37dc23fd7ecfbd1db22057af44138818"
+        },
+        {
+          "path": "tests/test_calendar_collection.py",
+          "sha256": "57c56d20460ccb5ff941715290c17070321e6a7ca855221f491198ca404b50f4"
+        },
+        {
+          "path": "tests/test_calendar_parsing.py",
+          "sha256": "2fe04236631f14d5df4d096d06e5aeddf03271f30845c0526608ac789b8b38cd"
+        },
+        {
+          "path": "tests/test_classification_pipeline.py",
+          "sha256": "834842c483c2d775751ec2cb2710d50c352176f278e33b12dc595571be39ee70"
+        },
+        {
+          "path": "tests/test_classifier.py",
+          "sha256": "584009dc05840895fd9e2d541c06186e809cdb81f9ae1becaf57c7d197223c04"
+        },
+        {
+          "path": "tests/test_cli.py",
+          "sha256": "78b70837eccd3ffc6f21e496d86967a4248ddea8584b58808ab456959ae9e596"
+        },
+        {
+          "path": "tests/test_config.py",
+          "sha256": "756da125981b6ab9003a3f1f34d38f93d8e5019f13518b445504c10246c87663"
+        },
+        {
+          "path": "tests/test_feedback_review_backfill.py",
+          "sha256": "44f644f78b783a7bf48fc5222e45a609262f63023a99a69f0fc4988b314739d0"
+        },
+        {
+          "path": "tests/test_intelligence.py",
+          "sha256": "90c7ca4e2a64594e9a08f75a433476111e97bdce560c0b97f6dda511eae53e66"
+        },
+        {
+          "path": "tests/test_knowledge.py",
+          "sha256": "cbb63839afe284f7655a0b32cf9399e1f0228c06b24b52c81f3e47a7e2d0b2a1"
+        },
+        {
+          "path": "tests/test_mail_collection.py",
+          "sha256": "1e4fa3fd444645f58d8ba1ef9f7571f969c333a53febaca965468fabcb409f4f"
+        },
+        {
+          "path": "tests/test_mail_parsing.py",
+          "sha256": "e73758561fa485f067a5fd2180cea09752f5030036c807f1685549cd68afd25d"
+        },
+        {
+          "path": "tests/test_proposals.py",
+          "sha256": "2794294ea6069ede675d82feeeea1fafd4c58acc152c34f3d760be0b3af122ca"
+        },
+        {
+          "path": "tests/test_runtime.py",
+          "sha256": "7540b0548058b97f615566e694bbb520046f8bb6494417d52da26f513dbdd898"
+        },
+        {
+          "path": "tests/test_watch.py",
+          "sha256": "c5cef8b76888f7b5c4b8f32ad96e421edf9fc0f6af402e035268f97bdb4160bd"
+        }
+      ],
+      "apply_order": 40,
+      "target": "sidecar",
+      "install_script": "/home/jinwang/workspace/jinwang-jarvis/scripts/install.sh",
+      "verify_script": "/home/jinwang/workspace/jinwang-jarvis/scripts/verify.sh",
+      "managed_config_paths": [],
+      "managed_runtime_paths": [
+        "~/.config/systemd/user/jinwang-jarvis-cycle.service",
+        "~/.config/systemd/user/jinwang-jarvis-cycle.timer",
+        "~/.config/systemd/user/jinwang-jarvis-weekly-review.service",
+        "~/.config/systemd/user/jinwang-jarvis-weekly-review.timer"
+      ],
+      "managed_hermes_paths": []
+    }
+  ]
+}

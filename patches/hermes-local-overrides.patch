@@ -1,0 +1,71 @@
+diff --git a/tests/gateway/test_restart_handoff.py b/tests/gateway/test_restart_handoff.py
+new file mode 100644
+index 00000000..eec6e153
+--- /dev/null
++++ b/tests/gateway/test_restart_handoff.py
+@@ -0,0 +1,65 @@
++from types import SimpleNamespace
++
++from gateway.run import GatewayRunner
++
++
++class _Platform:
++    value = "discord"
++
++
++def _make_source(user_id: str = "u1", chat_id: str = "c1"):
++    return SimpleNamespace(platform=_Platform(), user_id=user_id, chat_id=chat_id)
++
++
++def test_peek_pending_restart_handoff_matches_target_and_builds_prefill(tmp_path, monkeypatch):
++    handoff_path = tmp_path / "runtime" / "pending_restart_handoff.json"
++    handoff_path.parent.mkdir(parents=True, exist_ok=True)
++    handoff_path.write_text(
++        """
++        {
++          "target": {"platform": "discord", "user_id": "u1", "chat_id": "c1"},
++          "summary": "Continue working in ~/workspace/discord-voice-stt-enhance and recall the STT gateway restart investigation."
++        }
++        """.strip(),
++        encoding="utf-8",
++    )
++    monkeypatch.setattr(GatewayRunner, "_pending_restart_handoff_path", handoff_path)
++
++    messages, matched_path = GatewayRunner._peek_pending_restart_handoff(_make_source(), "sess-1")
++
++    assert matched_path == handoff_path
++    assert messages == [
++        {
++            "role": "user",
++            "content": "[Restart handoff context — written before gateway restart]\nContinue working in ~/workspace/discord-voice-stt-enhance and recall the STT gateway restart investigation.",
++        }
++    ]
++
++
++def test_peek_pending_restart_handoff_ignores_mismatched_target(tmp_path, monkeypatch):
++    handoff_path = tmp_path / "runtime" / "pending_restart_handoff.json"
++    handoff_path.parent.mkdir(parents=True, exist_ok=True)
++    handoff_path.write_text(
++        '{"target":{"platform":"discord","user_id":"other","chat_id":"c1"},"summary":"wrong target"}',
++        encoding="utf-8",
++    )
++    monkeypatch.setattr(GatewayRunner, "_pending_restart_handoff_path", handoff_path)
++
++    messages, matched_path = GatewayRunner._peek_pending_restart_handoff(_make_source(), "sess-1")
++
++    assert messages == []
++    assert matched_path is None
++    assert handoff_path.exists()
++
++
++def test_consume_pending_restart_handoff_archives_file(tmp_path, monkeypatch):
++    handoff_path = tmp_path / "runtime" / "pending_restart_handoff.json"
++    handoff_path.parent.mkdir(parents=True, exist_ok=True)
++    handoff_path.write_text('{"summary":"hello"}', encoding="utf-8")
++    monkeypatch.setattr(GatewayRunner, "_pending_restart_handoff_path", handoff_path)
++
++    GatewayRunner._consume_pending_restart_handoff(handoff_path)
++
++    assert not handoff_path.exists()
++    consumed = list((tmp_path / "runtime" / "consumed").glob("pending_restart_handoff.*.json"))
++    assert len(consumed) == 1
