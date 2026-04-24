@@ -1,0 +1,31 @@
+bundle_id: discord-voice-stt-enhance
+display_name: Discord Voice STT Enhance
+repo_path: /home/jinwang/workspace/discord-voice-stt-enhance
+install_script: /home/jinwang/workspace/discord-voice-stt-enhance/scripts/install.sh
+verify_script: /home/jinwang/workspace/discord-voice-stt-enhance/scripts/verify.sh
+apply_order: 10
+target: external-runtime
+compatibility:
+  strategy: external-runtime-config
+  supported_branch: main
+source_fingerprint:
+  mode: repo-content
+  include:
+    - README.md
+    - SKILL.md
+    - scripts/*.sh
+    - references/*.md
+    - runtime/*.py
+    - runtime/*.bat
+    - runtime/*.env.example
+    - service/*.py
+    - tests/*.py
+  exclude:
+    - .git/**
+    - .pytest_cache/**
+    - .ruff_cache/**
+    - runtime/.venv/**
+managed_config_paths:
+  - ~/.hermes/config.yaml
+managed_runtime_paths:
+  - ~/.config/systemd/user/hermes-local-stt.service

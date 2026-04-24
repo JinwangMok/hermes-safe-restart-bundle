@@ -1,0 +1,23 @@
+bundle_id: hermes-safe-restart-bundle
+display_name: Hermes Safe Restart Bundle
+repo_path: /home/jinwang/workspace/hermes-safe-restart-bundle
+install_script: /home/jinwang/workspace/hermes-safe-restart-bundle/scripts/install.sh
+verify_script: /home/jinwang/workspace/hermes-safe-restart-bundle/scripts/verify.sh
+apply_order: 30
+target: ops-skill
+compatibility:
+  strategy: external-ops-workflow
+  supported_branch: main
+source_fingerprint:
+  mode: repo-content
+  include:
+    - README.md
+    - SKILL.md
+    - scripts/*.sh
+    - references/*.md
+    - docs/plans/*.md
+    - manifests/**/*.yaml
+  exclude:
+    - .git/**
+managed_config_paths:
+  - ~/.hermes/config.yaml

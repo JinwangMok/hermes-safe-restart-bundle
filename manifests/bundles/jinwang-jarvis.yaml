@@ -1,0 +1,32 @@
+bundle_id: jinwang-jarvis
+display_name: Jinwang Jarvis
+repo_path: /home/jinwang/workspace/jinwang-jarvis
+install_script: /home/jinwang/workspace/jinwang-jarvis/scripts/install.sh
+verify_script: /home/jinwang/workspace/jinwang-jarvis/scripts/verify.sh
+apply_order: 40
+target: sidecar
+compatibility:
+  strategy: sidecar-cli-boundary
+  supported_branch: main
+source_fingerprint:
+  mode: repo-content
+  include:
+    - README.md
+    - pyproject.toml
+    - src/**/*.py
+    - scripts/*.sh
+    - tests/**/*.py
+    - config/pipeline.yaml
+    - config/watch-sources/**/*.yaml
+    - docs/**/*.md
+  exclude:
+    - .git/**
+    - .pytest_cache/**
+    - data/**
+    - state/**
+    - wiki/**
+managed_runtime_paths:
+  - ~/.config/systemd/user/jinwang-jarvis-cycle.service
+  - ~/.config/systemd/user/jinwang-jarvis-cycle.timer
+  - ~/.config/systemd/user/jinwang-jarvis-weekly-review.service
+  - ~/.config/systemd/user/jinwang-jarvis-weekly-review.timer

@@ -1,0 +1,41 @@
+bundle_id: hermes-local-overrides
+display_name: Hermes Local Overrides Snapshot
+repo_path: /home/jinwang/.hermes/hermes-agent
+install_script: /home/jinwang/workspace/hermes-safe-restart-bundle/scripts/export-hermes-local-overrides-patch.sh
+verify_script: null
+apply_order: 5
+target: hermes
+compatibility:
+  strategy: local-overlay-snapshot
+  supported_branch: main
+source_fingerprint:
+  mode: hermes-dirty-overlay
+  include:
+    - gateway/platforms/discord.py
+    - gateway/run.py
+    - gateway/status.py
+    - package-lock.json
+    - tests/gateway/test_styled_voice_audio_paths.py
+    - tests/gateway/test_voice_command.py
+    - tests/tools/test_managed_media_gateways.py
+    - tests/tools/test_transcription_tools.py
+    - tools/transcription_tools.py
+    - tools/tts_tool.py
+    - tests/gateway/test_restart_handoff.py
+  exclude:
+    - .git/**
+ignored_untracked_paths:
+  - kubespray/
+managed_hermes_paths:
+  - gateway/platforms/discord.py
+  - gateway/run.py
+  - gateway/status.py
+  - package-lock.json
+  - tests/gateway/test_styled_voice_audio_paths.py
+  - tests/gateway/test_voice_command.py
+  - tests/tools/test_managed_media_gateways.py
+  - tests/tools/test_transcription_tools.py
+  - tools/transcription_tools.py
+  - tools/tts_tool.py
+  - tests/gateway/test_restart_handoff.py
+patch_output: /home/jinwang/workspace/hermes-safe-restart-bundle/patches/hermes-local-overrides.patch

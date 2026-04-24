@@ -1,0 +1,24 @@
+bundle_id: styled-voice
+display_name: Styled Voice
+repo_path: /home/jinwang/workspace/styled-voice
+install_script: /home/jinwang/workspace/styled-voice/scripts/install.sh
+verify_script: /home/jinwang/workspace/styled-voice/scripts/verify.sh
+apply_order: 20
+target: external-skill
+compatibility:
+  strategy: external-skill-config
+  supported_branch: main
+source_fingerprint:
+  mode: repo-content
+  include:
+    - README.md
+    - SKILL.md
+    - scripts/*.sh
+    - references/*.md
+    - tests/*.py
+    - assets/**
+  exclude:
+    - .git/**
+    - .pytest_cache/**
+managed_config_paths:
+  - ~/.hermes/config.yaml

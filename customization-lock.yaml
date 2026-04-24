@@ -1,0 +1,20 @@
+lock_version: 1
+workspace_root: /home/jinwang/workspace
+hermes_repo: /home/jinwang/.hermes/hermes-agent
+config_path: /home/jinwang/.hermes/config.yaml
+bundles:
+  - manifests/bundles/discord-voice-stt-enhance.yaml
+  - manifests/bundles/styled-voice.yaml
+  - manifests/bundles/hermes-safe-restart-bundle.yaml
+  - manifests/bundles/jinwang-jarvis.yaml
+policies:
+  require_pristine_hermes_checkout: true
+  require_origin_main_tree_match: true
+  forbid_hermes_source_mutation_bundles: true
+  block_unknown_untracked: true
+  require_preflight_before_execute: true
+  require_verify_before_restart: true
+  default_restart_mode: conservative-reset
+  allow_unsafe_marker_restart: false
+reports:
+  output_dir: /home/jinwang/workspace/hermes-safe-restart-bundle/reports
