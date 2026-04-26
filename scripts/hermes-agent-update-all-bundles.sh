@@ -222,7 +222,7 @@ PY
       ;;
   esac
 
-  printf '\nDone: Hermes updated, bundles re-applied, verifies passed, restart completed.\n'
+  printf '\nDone: Hermes updated, source-untouched external bundles installed, verifies passed, restart completed.\n'
 }
 
 case "$MODE" in

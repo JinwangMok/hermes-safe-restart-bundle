@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -12,10 +13,18 @@ ROOT = Path(__file__).resolve().parents[1]
 BUILD_SCRIPT = ROOT / "scripts" / "build-customization-lock.py"
 PREFLIGHT_SCRIPT = ROOT / "scripts" / "update-preflight.py"
 UPDATE_SCRIPT = ROOT / "scripts" / "hermes-agent-update-all-bundles.sh"
+LEGACY_SAFE_RESTART_SCRIPT = ROOT.parent / "hermes-safe-restart"
 
 
 def run(cmd: list[str], cwd: Path | None = None) -> subprocess.CompletedProcess[str]:
     return subprocess.run(cmd, cwd=cwd, check=True, capture_output=True, text=True)
+
+
+def write_fake_systemctl(tmp_path: Path) -> Path:
+    systemctl = tmp_path / "systemctl"
+    systemctl.write_text("#!/bin/sh\nexit 1\n", encoding="utf-8")
+    systemctl.chmod(0o755)
+    return systemctl
 
 
 def make_remote_clone(tmp_path: Path) -> Path:
@@ -167,3 +176,59 @@ def test_update_script_accepts_documented_restart_mode_pair():
     assert completed.returncode == 0
     assert "Usage:" in completed.stdout
     assert "--restart-mode conservative-reset|unsafe-marker" in completed.stdout
+
+
+def test_legacy_safe_restart_is_disabled_by_default(tmp_path: Path):
+    assert LEGACY_SAFE_RESTART_SCRIPT.exists()
+    fake_systemctl = write_fake_systemctl(tmp_path)
+    home = tmp_path / "home"
+    env = os.environ.copy()
+    env.update(
+        {
+            "HOME": str(home),
+            "PATH": f"{fake_systemctl.parent}:{env.get('PATH', '')}",
+            "_HERMES_SAFE_RESTART_DETACHED": "1",
+        }
+    )
+
+    completed = subprocess.run(
+        [str(LEGACY_SAFE_RESTART_SCRIPT)],
+        capture_output=True,
+        text=True,
+        env=env,
+    )
+
+    combined = completed.stdout + completed.stderr
+    assert completed.returncode == 1
+    assert "disabled by policy" in combined
+    assert "conservative restart flow" in combined
+    assert not (home / ".hermes" / ".clean_shutdown").exists()
+    assert not (home / ".hermes" / "sessions" / "sessions.json.pre-restart").exists()
+
+
+def test_legacy_safe_restart_requires_explicit_override_to_continue(tmp_path: Path):
+    assert LEGACY_SAFE_RESTART_SCRIPT.exists()
+    fake_systemctl = write_fake_systemctl(tmp_path)
+    home = tmp_path / "home"
+    env = os.environ.copy()
+    env.update(
+        {
+            "HOME": str(home),
+            "PATH": f"{fake_systemctl.parent}:{env.get('PATH', '')}",
+            "_HERMES_SAFE_RESTART_DETACHED": "1",
+            "ALLOW_UNSAFE_MARKER_RESTART": "1",
+        }
+    )
+
+    completed = subprocess.run(
+        [str(LEGACY_SAFE_RESTART_SCRIPT)],
+        capture_output=True,
+        text=True,
+        env=env,
+    )
+
+    combined = completed.stdout + completed.stderr
+    assert completed.returncode == 1
+    assert "disabled by policy" not in combined
+    assert "Gateway is not running" in combined
+    assert not (home / ".hermes" / ".clean_shutdown").exists()

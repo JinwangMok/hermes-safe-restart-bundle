@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-24T04:45:32.698620+00:00",
+  "generated_at": "2026-04-26T02:36:16.963318+00:00",
   "lock_path": "/home/jinwang/workspace/hermes-safe-restart-bundle/customization-lock.yaml",
   "hermes_repo": "/home/jinwang/.hermes/hermes-agent",
   "policies": {
@@ -18,7 +18,7 @@
       "display_name": "Discord Voice STT Enhance",
       "manifest_path": "/home/jinwang/workspace/hermes-safe-restart-bundle/manifests/bundles/discord-voice-stt-enhance.yaml",
       "repo_path": "/home/jinwang/workspace/discord-voice-stt-enhance",
-      "git_head": "fb226935a0d8c37eb380a74f0c70007ea499f641",
+      "git_head": "edee57562313663087e5d7711a968db9640c58f6",
       "source_digest": "4526a6b67a79bf3e52373192096cd37380bb9e2d4eaf5ed105df1798ca1d09cd",
       "file_count": 23,
       "files": [
@@ -132,7 +132,7 @@
       "display_name": "Styled Voice",
       "manifest_path": "/home/jinwang/workspace/hermes-safe-restart-bundle/manifests/bundles/styled-voice.yaml",
       "repo_path": "/home/jinwang/workspace/styled-voice",
-      "git_head": "1a6ff590555dbfdb73f090d548040224380b0fa2",
+      "git_head": "e523315460f1a8688df97d2fe7420334eb5673cc",
       "source_digest": "8b6d936cf06206686a1dba6c1f7cf9c5b6c3fb46b6277b3c1f5aa51edabad97f",
       "file_count": 10,
       "files": [
@@ -192,17 +192,17 @@
       "display_name": "Hermes Safe Restart Bundle",
       "manifest_path": "/home/jinwang/workspace/hermes-safe-restart-bundle/manifests/bundles/hermes-safe-restart-bundle.yaml",
       "repo_path": "/home/jinwang/workspace/hermes-safe-restart-bundle",
-      "git_head": null,
-      "source_digest": "120513b2e8fcfb2f781287314c73388698d500522634d7d95fa989e4a20c2e2e",
+      "git_head": "2d47d0d14d508c2320d63f440c1e89152e75cb27",
+      "source_digest": "8d215f44d5c836f08ce962eed95d90ab443b2df0148bd2660d38b2b5d475d2f6",
       "file_count": 15,
       "files": [
         {
           "path": "README.md",
-          "sha256": "5c277ce25a504aa2a02e57b28cd42245bb1f01c212576035d78440d823211df2"
+          "sha256": "2c185347e6fda4f3ea629e8f90a6f714c714efcc5eb6bfa1b2cec7645b241af1"
         },
         {
           "path": "SKILL.md",
-          "sha256": "fc32f8225ddc6b2dedfa1b5b7085796bf525ab39ac9e57362e0162bf0c8f15c2"
+          "sha256": "f1ba24c45e2b17daf66ef341a052bb1027fee409f68c3a60bd32af6bbaabea63"
         },
         {
           "path": "docs/plans/2026-04-24-hermes-update-assurance-framework.md",
@@ -246,7 +246,7 @@
         },
         {
           "path": "scripts/hermes-agent-update-all-bundles.sh",
-          "sha256": "68af5733ea5cbb7221afc56f4e6524b6bbb012316ed925ba204ce4a76627255c"
+          "sha256": "f7e4278a66730b248589149e1e9ff445972d690ee58fcd9a6209cba30ce2a3a0"
         },
         {
           "path": "scripts/install.sh",
@@ -272,9 +272,9 @@
       "display_name": "Jinwang Jarvis",
       "manifest_path": "/home/jinwang/workspace/hermes-safe-restart-bundle/manifests/bundles/jinwang-jarvis.yaml",
       "repo_path": "/home/jinwang/workspace/jinwang-jarvis",
-      "git_head": "06ce81f7e0241d04696c723ac47fb8bdfecffd4c",
-      "source_digest": "bd5a0410d664764fe8c7acc4f891db7c9329af01f86c149f108704eea967b9f8",
-      "file_count": 87,
+      "git_head": "1638c8bcbb63673d7304c116feb394e5f3d7a1a2",
+      "source_digest": "d498624725d5435eff9a3b4d1d84fdf6f795032b29f83bf2e9eafd0f8b95ec36",
+      "file_count": 104,
       "files": [
         {
           "path": "README.md",
@@ -289,12 +289,36 @@
           "sha256": "8b091dd596ebcf61d455c188320c2cf59a0e7c595b11865d386173e0c1fe6f63"
         },
         {
+          "path": "config/watch-sources/analysis/import-ai.yaml",
+          "sha256": "6a0ddca1b46046c396adc482664385d7e0260bdbcc1d2ff6ad2d1f7ae37907e4"
+        },
+        {
+          "path": "config/watch-sources/analysis/latent-space.yaml",
+          "sha256": "ea4daf64a6b3ebccf10ec513ac4e74deb3911d0272e7d389a1f03b2821596371"
+        },
+        {
           "path": "config/watch-sources/analysis/semianalysis.yaml",
           "sha256": "4a40f2e1ac7f0664caa40e01170020aef3673132e02a75c64cb4db4af3d217de"
         },
         {
+          "path": "config/watch-sources/media/mit-tech-review-ai.yaml",
+          "sha256": "eefb1c42ef30352fb0b600e1285cac7e6f2a9f184a2fb8e8fd7bfd13445c07f0"
+        },
+        {
+          "path": "config/watch-sources/media/techcrunch-ai.yaml",
+          "sha256": "ff78ccd53b77f04508aca7c7fa80531eb434a8efef0b9fa0f7fc74b8a21a0c95"
+        },
+        {
+          "path": "config/watch-sources/media/the-verge-ai.yaml",
+          "sha256": "ced5312431297a28860f53451023a411065ca7a5dbac0b60bed0bfad7eee14a6"
+        },
+        {
+          "path": "config/watch-sources/media/venturebeat-ai.yaml",
+          "sha256": "097e825b6155d790e386667b2cb3b47a300a95a45cb69ed71b2b60adfa68b609"
+        },
+        {
           "path": "config/watch-sources/official/MANIFEST.yaml",
-          "sha256": "b3e90e66f23f45b7d1798787311f5868a083938c9dfce4bd079c013287c5d392"
+          "sha256": "7ace50391286404e0a90df81c4597d84a525832c1faa405a6a9b6aac7bd0f30b"
         },
         {
           "path": "config/watch-sources/official/anthropic-news.yaml",
@@ -337,8 +361,24 @@
           "sha256": "75da9a19dafefc8108277c4ed40317a00e7cac31f57512ea2277194a951053ae"
         },
         {
+          "path": "config/watch-sources/official/cncf-blog.yaml",
+          "sha256": "e7125694e1e4b6055dd73314bb19bb364798f20b5ca61163fe7b1232e8a09037"
+        },
+        {
           "path": "config/watch-sources/official/deepmind-blog.yaml",
           "sha256": "983e821cfa425be6a7b199812a56091171585eaa8fbee7b15e6680902d9b54f7"
+        },
+        {
+          "path": "config/watch-sources/official/docker-blog.yaml",
+          "sha256": "d74d45bf2dd91095804ae488987869f9858105bae9e840f4eeed9e1fd7a7684f"
+        },
+        {
+          "path": "config/watch-sources/official/github-blog.yaml",
+          "sha256": "44a426cc0112ca8e8b4bee61d697a08f0188d264a037bec5e26b9d2078713b3d"
+        },
+        {
+          "path": "config/watch-sources/official/github-changelog.yaml",
+          "sha256": "742f291666f1ee23caf33162b9a5f7a9e5b2f3d8526756372be442ad38126879"
         },
         {
           "path": "config/watch-sources/official/google-ai-x.yaml",
@@ -363,6 +403,10 @@
         {
           "path": "config/watch-sources/official/ibm-x.yaml",
           "sha256": "ee10d6d19cf7571c4edacbd0cc97673ad1e0edf636f5ea804529f59bebf816d9"
+        },
+        {
+          "path": "config/watch-sources/official/kubernetes-blog.yaml",
+          "sha256": "2b90b5a38186256dfbc63279949419a3ccccb461e3a792218b074610d94a31ad"
         },
         {
           "path": "config/watch-sources/official/meta-ai-x.yaml",
@@ -391,6 +435,10 @@
         {
           "path": "config/watch-sources/official/paloalto-blog.yaml",
           "sha256": "ba80608c4b3e27e3ddd8d7ae8dcf42a12a394a8cacd85c6166def3459738e150"
+        },
+        {
+          "path": "config/watch-sources/official/pytorch-blog.yaml",
+          "sha256": "5c63f5a3a6876d81827cc5428d8321a7915b4c57aa4486fce38b31ec510a5d86"
         },
         {
           "path": "config/watch-sources/official/samsung-ds-x.yaml",
@@ -422,7 +470,7 @@
         },
         {
           "path": "docs/cron.md",
-          "sha256": "f58e6f4d166afd5ee7cfb66de01b05ebe324fe45f19ae38515243a388cd2e992"
+          "sha256": "85288fb12421327f03debc0da364a369f0c1a7b3fac5cc0fb99d9e1fdeda09a0"
         },
         {
           "path": "docs/plans/2026-04-20-all-mail-knowledge-lane.md",
@@ -482,7 +530,7 @@
         },
         {
           "path": "scripts/install.sh",
-          "sha256": "17af09d67b1ff94d8b0d17ee329233db02d330fb8375c7ee054ce63d54730087"
+          "sha256": "ad02a378db89d258a3bd6a830ea163a7268dd36d30de9df2ad255fd12dba9b6a"
         },
         {
           "path": "scripts/verify.sh",
@@ -514,7 +562,7 @@
         },
         {
           "path": "src/jinwang_jarvis/cli.py",
-          "sha256": "5005e39a1e88ede572c4ad4afbefd5bb4d98ff585ea1dffafb813c05b484c5c1"
+          "sha256": "8b2204e2a5dce2ec31fc40853f76b390eb36a4d2156b7916bbec811318c514c2"
         },
         {
           "path": "src/jinwang_jarvis/config.py",
@@ -529,12 +577,16 @@
           "sha256": "63070389fce6339251b9d19005304660c6384fac6927da9c26f31c14ee4624f8"
         },
         {
+          "path": "src/jinwang_jarvis/hermes_continuity.py",
+          "sha256": "8c238c61cf74047043673ea64f4184f6368d8667b2e28dca4f8678504d4af737"
+        },
+        {
           "path": "src/jinwang_jarvis/intelligence.py",
-          "sha256": "c37e7bb0a866adecc1b1236bc2b1eca598ba7a856668b0a7807fcb54fdc75f03"
+          "sha256": "17706a0b825743a62ba1e7837603bcaa85f32d91756ad0f85373d9d1f21c2de3"
         },
         {
           "path": "src/jinwang_jarvis/knowledge.py",
-          "sha256": "63d1378cfb918d631a4976174884913b4952054fb3ed1edbc92e6b3fa027dd7b"
+          "sha256": "469f07ec81561cef5f75f51cd75c8910976d924dd28216c337082060c7189d5d"
         },
         {
           "path": "src/jinwang_jarvis/mail.py",
@@ -550,11 +602,19 @@
         },
         {
           "path": "src/jinwang_jarvis/runtime.py",
-          "sha256": "7cf89ac12232ccf1cbb3f150cfdcf02a0fecb4f00f8402854c16a2e6cdc89d31"
+          "sha256": "48d7680c06aad15903a39cb28896ff832cddfad28f0ddd31fa64de1378165ad2"
+        },
+        {
+          "path": "src/jinwang_jarvis/styled_voice_samples.py",
+          "sha256": "3a2717707cf513a9c87701297bd460e8bc98fca1f9810fa2499cca2c5d77c611"
         },
         {
           "path": "src/jinwang_jarvis/watch.py",
-          "sha256": "7d02adafec674f1d6d1abba9215b8da993db428501b4fbfce22044bdef90f677"
+          "sha256": "891bd6296b81cada6bbff2d20a341debc7903c064439fd63d39e2383935214e4"
+        },
+        {
+          "path": "src/jinwang_jarvis/wiki_contract.py",
+          "sha256": "0f3df1a5ef45ae7c2460b684c2e51bc140c3d7ecc97c91a97175c37a640f120c"
         },
         {
           "path": "tests/conftest.py",
@@ -586,7 +646,7 @@
         },
         {
           "path": "tests/test_cli.py",
-          "sha256": "78b70837eccd3ffc6f21e496d86967a4248ddea8584b58808ab456959ae9e596"
+          "sha256": "c0e1be187f866df67fbfdc9c524a79babea2344af3568448827bf772bc549016"
         },
         {
           "path": "tests/test_config.py",
@@ -597,12 +657,16 @@
           "sha256": "44f644f78b783a7bf48fc5222e45a609262f63023a99a69f0fc4988b314739d0"
         },
         {
+          "path": "tests/test_hermes_continuity.py",
+          "sha256": "9f20eb193bfa7e39ff74f087e35a9cd78803433f3ddb5d58583d9eb2c6390a32"
+        },
+        {
           "path": "tests/test_intelligence.py",
-          "sha256": "90c7ca4e2a64594e9a08f75a433476111e97bdce560c0b97f6dda511eae53e66"
+          "sha256": "cdb525da294edeabf3bac53578c6eeaa5edcffef49fe61de45374b5f8453b4aa"
         },
         {
           "path": "tests/test_knowledge.py",
-          "sha256": "cbb63839afe284f7655a0b32cf9399e1f0228c06b24b52c81f3e47a7e2d0b2a1"
+          "sha256": "c119485dd259ea7e6e4bb41232c2daf7c9be3eb9288114705f65fd68ee7a9edd"
         },
         {
           "path": "tests/test_mail_collection.py",
@@ -618,11 +682,15 @@
         },
         {
           "path": "tests/test_runtime.py",
-          "sha256": "7540b0548058b97f615566e694bbb520046f8bb6494417d52da26f513dbdd898"
+          "sha256": "8bd3229bb25232d06f6894943b31e1f4073ee861745b5db226e8e050c903b45b"
+        },
+        {
+          "path": "tests/test_styled_voice_samples.py",
+          "sha256": "d08761f422b18d814ef2571cc3804c357287c7ea454fb7101318878e8def10f7"
         },
         {
           "path": "tests/test_watch.py",
-          "sha256": "c5cef8b76888f7b5c4b8f32ad96e421edf9fc0f6af402e035268f97bdb4160bd"
+          "sha256": "9354b2d752eadd710d46e01f49702c57c35b78249e9ae621ec5f84294810ccea"
         }
       ],
       "apply_order": 40,

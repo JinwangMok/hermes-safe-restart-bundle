@@ -12,7 +12,7 @@ This repo is now the source of truth for the **external-only** lock/manifests/pr
 This bundle currently governs:
 - `customization-lock.yaml` and bundle manifests
 - source-untouched preflight and verification
-- external bundle apply ordering
+- external bundle install/verify ordering
 - conservative restart policy
 
 ## Recommended layering
@@ -50,3 +50,5 @@ cd ~/workspace/hermes-safe-restart-bundle
 ```
 
 The prepare/execute flow now treats any Hermes source mutation as a blocker instead of re-applying patches into the checkout.
+
+The legacy `~/.local/bin/hermes-safe-restart` marker wrapper is intentionally disabled by default. Use `ALLOW_UNSAFE_MARKER_RESTART=1` only when you explicitly want to exercise that unsafe legacy path.
