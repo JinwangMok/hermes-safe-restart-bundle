@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26T02:36:16.963318+00:00",
+  "generated_at": "2026-05-02T15:06:16.696475+00:00",
   "lock_path": "/home/jinwang/workspace/hermes-safe-restart-bundle/customization-lock.yaml",
   "hermes_repo": "/home/jinwang/.hermes/hermes-agent",
   "policies": {
@@ -192,9 +192,9 @@
       "display_name": "Hermes Safe Restart Bundle",
       "manifest_path": "/home/jinwang/workspace/hermes-safe-restart-bundle/manifests/bundles/hermes-safe-restart-bundle.yaml",
       "repo_path": "/home/jinwang/workspace/hermes-safe-restart-bundle",
-      "git_head": "2d47d0d14d508c2320d63f440c1e89152e75cb27",
-      "source_digest": "8d215f44d5c836f08ce962eed95d90ab443b2df0148bd2660d38b2b5d475d2f6",
-      "file_count": 15,
+      "git_head": "27d48b200f77fe2c93b5c833e585d9d1f1c2140f",
+      "source_digest": "d9e0dd5e9aa6448618291ca00804c393c95b482f1e2e2c9632fe4adafa848d24",
+      "file_count": 17,
       "files": [
         {
           "path": "README.md",
@@ -237,6 +237,10 @@
           "sha256": "5901cb37ce5d41355a77a442e8ca6e44c9309f3eec981bbf2f4ba2fa0c302b9c"
         },
         {
+          "path": "scripts/armed-opencode-recovery-20260502.sh",
+          "sha256": "e68ec945f430136585f58e7c89fc247d37074f2d6159837675e4f7d0658158c1"
+        },
+        {
           "path": "scripts/export-hermes-local-overrides-patch.sh",
           "sha256": "027daf0fafbd8406a05cfe419a08ad4a7690ba7e5c262933bbf971dbde37bce5"
         },
@@ -251,6 +255,10 @@
         {
           "path": "scripts/install.sh",
           "sha256": "0c0866b57b38741095cbf916d38b0d8bc2db139181469371f219e0fc3e627530"
+        },
+        {
+          "path": "scripts/run-hermes-update-restart-20260502.sh",
+          "sha256": "b301356d6874dab9ee3e7970b2abb5dadd60d5a83cb902ac5c46d4afe60c7cae"
         },
         {
           "path": "scripts/verify.sh",
@@ -272,17 +280,41 @@
       "display_name": "Jinwang Jarvis",
       "manifest_path": "/home/jinwang/workspace/hermes-safe-restart-bundle/manifests/bundles/jinwang-jarvis.yaml",
       "repo_path": "/home/jinwang/workspace/jinwang-jarvis",
-      "git_head": "1638c8bcbb63673d7304c116feb394e5f3d7a1a2",
-      "source_digest": "d498624725d5435eff9a3b4d1d84fdf6f795032b29f83bf2e9eafd0f8b95ec36",
-      "file_count": 104,
+      "git_head": "9d216cbd34326ae52a27baf24a080fd81eb4af87",
+      "source_digest": "f684082bb4522e5223a36bdc830768a5497e161ee65321c59eb8d99e2dae7429",
+      "file_count": 197,
       "files": [
         {
           "path": "README.md",
-          "sha256": "9f81fd1dd1364ceb3e2efae1a07680c65f0c2b41782456e064b9f011abced5b2"
+          "sha256": "ea5c0a2fd76f16f0bcf057154e699207fe45c4df174ace413d8537ef1f18407a"
         },
         {
           "path": "config/pipeline.yaml",
           "sha256": "80d9207cbe005cff6bae03f9d73e9523cdc9c022e7edf8e180d792e0e69adbba"
+        },
+        {
+          "path": "config/watch-sources/analysis/alexander-doria-x.yaml",
+          "sha256": "75fc7989b6af707a2599e38afb805cfd9fac83f82246986004a830a8a1f6d0f4"
+        },
+        {
+          "path": "config/watch-sources/analysis/andrej-karpathy-x.yaml",
+          "sha256": "9f5cd93e658155d1113a916be2aa73e9a1512ac995fb5c1b0079f1659d881b05"
+        },
+        {
+          "path": "config/watch-sources/analysis/clem-delangue-x.yaml",
+          "sha256": "6a17f01d6a1e1ff87c565f7ea2c705f397f7727750fa5c001be094acadfccdf8"
+        },
+        {
+          "path": "config/watch-sources/analysis/francois-chollet-x.yaml",
+          "sha256": "93aab7cfb3850971d0ff796217a4e34c41d9e57d8b9dc6595016c851255d135a"
+        },
+        {
+          "path": "config/watch-sources/analysis/han-yuha-openai-korea-search-rss.yaml",
+          "sha256": "bcc98071b8346738b61575ee9c308d7e9a6cab05c428e52b7494796780d54853"
+        },
+        {
+          "path": "config/watch-sources/analysis/harrison-chase-x.yaml",
+          "sha256": "15a95707828d3281ee69ed7ab1783efa44bd70b30b1949222719c4a887d2f108"
         },
         {
           "path": "config/watch-sources/analysis/hpcwire.yaml",
@@ -293,12 +325,216 @@
           "sha256": "6a0ddca1b46046c396adc482664385d7e0260bdbcc1d2ff6ad2d1f7ae37907e4"
         },
         {
+          "path": "config/watch-sources/analysis/jack-clark-x.yaml",
+          "sha256": "db3813ecd3086c5da3f3b2776f3c33888a441345dc6d6baba6c6b5aa32607bd1"
+        },
+        {
+          "path": "config/watch-sources/analysis/jeff-dean-x.yaml",
+          "sha256": "8331c6afef97b01eed61534ea39a36df03af8b9f5ffe167ab3a35830690b7fa7"
+        },
+        {
+          "path": "config/watch-sources/analysis/jung-gubong-claw-code-github-atom.yaml",
+          "sha256": "af9c0e700814256407635efce09d824bb58f908fda25aa8984e7a98f8d19118b"
+        },
+        {
+          "path": "config/watch-sources/analysis/jung-gubong-goobongjeong-x.yaml",
+          "sha256": "1274f17096837407dbc507006bd4bfd252c1294b38356d11977232b1ea8d3097"
+        },
+        {
+          "path": "config/watch-sources/analysis/jung-gubong-team-attention-agent-council-github-atom.yaml",
+          "sha256": "ec1ade02b210145fdc8a201ff65fbebd23c0162c87d22fd832cb338eea60a309"
+        },
+        {
+          "path": "config/watch-sources/analysis/jung-gubong-team-attention-hoyeon-github-atom.yaml",
+          "sha256": "2886ee16aed66056f7839bd5942d90e6234e32001394dd24ffeef45bd8c116a1"
+        },
+        {
+          "path": "config/watch-sources/analysis/jung-gubong-team-attention-oh-my-ralph-github-atom.yaml",
+          "sha256": "bdc224338fece04f2b8ea4cc73c9ce8aa790cd6490cc181cfaa495df28c5b317"
+        },
+        {
+          "path": "config/watch-sources/analysis/jung-seungheon-roach-pi-github-atom.yaml",
+          "sha256": "8afd5d7307c86eacc58c4baf62196286735ca21fd15a4dc9579a194833abedf2"
+        },
+        {
           "path": "config/watch-sources/analysis/latent-space.yaml",
           "sha256": "ea4daf64a6b3ebccf10ec513ac4e74deb3911d0272e7d389a1f03b2821596371"
         },
         {
+          "path": "config/watch-sources/analysis/near-cyan-x.yaml",
+          "sha256": "551a7ec7e72621bc99a940ee81fe6e0d8822ee4f068562060cb819ab2aa374e0"
+        },
+        {
+          "path": "config/watch-sources/analysis/omocon-ashley-ha-x.yaml",
+          "sha256": "0facc14981b51b6d9170f25a7bb8a9e5c3ccf31739e4526404d40bb055d6b5ef"
+        },
+        {
+          "path": "config/watch-sources/analysis/omocon-austin-wang-x.yaml",
+          "sha256": "9745bc5e9f055e5d320704af09a0634be64f48bb9f031d2a7ae8451911c1a7dc"
+        },
+        {
+          "path": "config/watch-sources/analysis/omocon-bloatedaislop-x.yaml",
+          "sha256": "da85aeeb384a48d0b72eec10fc25899e74bcc925c4f5ba9fccfe67b6e0932bf1"
+        },
+        {
+          "path": "config/watch-sources/analysis/omocon-ivan-leo-x.yaml",
+          "sha256": "32b3e3a820273c52c28cc044df92b9d0419ea82b434c7c3497c121ff14b6b2c3"
+        },
+        {
+          "path": "config/watch-sources/analysis/omocon-jeffrey-kim-x.yaml",
+          "sha256": "ce6e47af628992e10eee88a82054462df06bfa2ca4a4507591cd5a7e9977a129"
+        },
+        {
+          "path": "config/watch-sources/analysis/omocon-jqonly-x.yaml",
+          "sha256": "51960d69cfb095d50b67edc47ab4975dfad7e808f07f175e3ce00ef9e4f17d39"
+        },
+        {
+          "path": "config/watch-sources/analysis/omocon-junghwan-na-x.yaml",
+          "sha256": "e89d03d6112481dbe4977e8e0de98f0d896f9e3239f107dbdc8d64b5db23d215"
+        },
+        {
+          "path": "config/watch-sources/analysis/omocon-justsisyphus-x.yaml",
+          "sha256": "675a5d41d1fa1dbe9966bff9804a190880dc1f1c9241bec03d17d5c3ae9e0b4c"
+        },
+        {
+          "path": "config/watch-sources/analysis/omocon-luma-benedetto-x.yaml",
+          "sha256": "08270db317c7e7f20f8367bbbb93d2fe32320c84d2c7ab9314f698930cd60b07"
+        },
+        {
+          "path": "config/watch-sources/analysis/omocon-luma-doyun-ha-x.yaml",
+          "sha256": "b358fb66f382ab7c124e3946974b3d149f98e8b1ecdce8ac87ce7135cefe3fa1"
+        },
+        {
+          "path": "config/watch-sources/analysis/omocon-luma-florian-ludot-x.yaml",
+          "sha256": "3fed0c6f287cab2b19a7f23e3a8d19a051d5c606020fc36037e1b2ece772939d"
+        },
+        {
+          "path": "config/watch-sources/analysis/omocon-luma-gabe-kaufman-x.yaml",
+          "sha256": "3364ef91112d3be796042cc6d3d964ee17a1a9fd04cfabe0771da73ebdbe7ed2"
+        },
+        {
+          "path": "config/watch-sources/analysis/omocon-luma-howard-jiacheng-li-x.yaml",
+          "sha256": "7d19a9d6ebb123fe46979174108686aae1998a3e62fab6e57a983cf6e1dd0010"
+        },
+        {
+          "path": "config/watch-sources/analysis/omocon-luma-hyunjae-chung-x.yaml",
+          "sha256": "f5cda8537080623238e0edcabda3bf9aa64a86f196fff4fc38d0a8499060cb0f"
+        },
+        {
+          "path": "config/watch-sources/analysis/omocon-luma-jae-ahn-x.yaml",
+          "sha256": "7273bb4a5e8d3760ef6128193c4972383fb8f79cd866883faf1dce227422a9ba"
+        },
+        {
+          "path": "config/watch-sources/analysis/omocon-luma-jun-kim-x.yaml",
+          "sha256": "e640de1ce465a9be7a1e814639d0034505f05fde6038f61d3514506a2698123c"
+        },
+        {
+          "path": "config/watch-sources/analysis/omocon-luma-lena-kang-x.yaml",
+          "sha256": "f503a49e0d38f298927e04d4c8a69c879f881a97145c7f7f47017fbcd9d674e2"
+        },
+        {
+          "path": "config/watch-sources/analysis/omocon-luma-lucy-park-x.yaml",
+          "sha256": "071a001c005a33eb310cd3aba93416281308344adcffc92deaa53d877535e9b9"
+        },
+        {
+          "path": "config/watch-sources/analysis/omocon-luma-pia-park-x.yaml",
+          "sha256": "409ea5aad1bcdd1750528d71ecb0f0e379ebde92d5a3da00bd740ebb4e70e26a"
+        },
+        {
+          "path": "config/watch-sources/analysis/omocon-luma-sarah-hatcher-x.yaml",
+          "sha256": "41cf52282dee8ead5e57c912342d600c5ee8851d585b213f6210f1ac99258943"
+        },
+        {
+          "path": "config/watch-sources/analysis/omocon-luma-seowoo-han-x.yaml",
+          "sha256": "1e7c1a672abf5e74c94090e265135c5d5d047c37babd432ff2a3762baf9324f5"
+        },
+        {
+          "path": "config/watch-sources/analysis/omocon-luma-sungjoo-ha-x.yaml",
+          "sha256": "bea4a961657c7c0f6a92c72335dea9876a7963ffb3e1578f013c38913bd9ffdd"
+        },
+        {
+          "path": "config/watch-sources/analysis/omocon-luma-taemin-yoo-x.yaml",
+          "sha256": "913af87044886a48c382f91ec716b9f26cd2cee7e77a7acf19327f31aaed2081"
+        },
+        {
+          "path": "config/watch-sources/analysis/omocon-luma-tony0x-x.yaml",
+          "sha256": "f79ea26cdde71799dae7e2bba0d55bb8c1a5d74c1943012ddb254c9f3e141839"
+        },
+        {
+          "path": "config/watch-sources/analysis/omocon-luma-twinfin-x.yaml",
+          "sha256": "b2d25852e7f765e09bfadaf7ca89d813cdfa350f50f5f8159a4955a5f1ad23e5"
+        },
+        {
+          "path": "config/watch-sources/analysis/omocon-luma-vaibhav-srivastav-x.yaml",
+          "sha256": "2c0ac31b3916e22f184f64001a9c14fa3e3b54b3bca20a0c4ae4e9610fbd3f24"
+        },
+        {
+          "path": "config/watch-sources/analysis/omocon-luma-won-park-x.yaml",
+          "sha256": "3151cf65d9e6fbfab0e77bf0a664931a891458852b7a8c67ef91b6c65c4216df"
+        },
+        {
+          "path": "config/watch-sources/analysis/omocon-luma-woonggi-min-x.yaml",
+          "sha256": "3947526357a3c5c129593c44bc9253a0427a5a67254c54071bcd958c9685d7dd"
+        },
+        {
+          "path": "config/watch-sources/analysis/omocon-manaflowai-x.yaml",
+          "sha256": "4cd1b9601d161b44afc89a20f2d87193df8a1e5fab5c24c27480f205a669b9e8"
+        },
+        {
+          "path": "config/watch-sources/analysis/omocon-q-yeongyu-kim-x.yaml",
+          "sha256": "bf82ce694988fd28b91efb3054c7689f750dc8f546c8a7c9ea872ad212f847c3"
+        },
+        {
+          "path": "config/watch-sources/analysis/omocon-realsigridjin-x.yaml",
+          "sha256": "3a5c61a8db68c1797843fc6fc0ca69ede15718a9acafaac8ad3d6073b4ae3c49"
+        },
+        {
+          "path": "config/watch-sources/analysis/sam-altman-x.yaml",
+          "sha256": "0000ff84ffb6e428a37474fa0d6010759132ff1a16f8f2834a559ff0da63f2df"
+        },
+        {
+          "path": "config/watch-sources/analysis/satya-nadella-x.yaml",
+          "sha256": "1593eaec33887b5a908553fc3f7066aebfe04ed30aa0d746a1115350e9fabb3f"
+        },
+        {
+          "path": "config/watch-sources/analysis/sebastian-raschka-x.yaml",
+          "sha256": "b9427d632163a4bb76b9a0217d4fcc1f541718671dd98690966e3954e4217a4f"
+        },
+        {
           "path": "config/watch-sources/analysis/semianalysis.yaml",
           "sha256": "4a40f2e1ac7f0664caa40e01170020aef3673132e02a75c64cb4db4af3d217de"
+        },
+        {
+          "path": "config/watch-sources/analysis/shreya-shankar-x.yaml",
+          "sha256": "e427527cd73cdaa2b49792d354f79a6145a66003aeb3923dfe99ed01f60b93ce"
+        },
+        {
+          "path": "config/watch-sources/analysis/soumith-chintala-x.yaml",
+          "sha256": "ef0d74826b18800d9a6c7cd16c188d6b55733ffcf48730961b9e89bc6f2ff764"
+        },
+        {
+          "path": "config/watch-sources/analysis/swyx-x.yaml",
+          "sha256": "f4adc3354973df0accd69ebc28f4415c1b719409e90728379a2fc40232513868"
+        },
+        {
+          "path": "config/watch-sources/analysis/yann-lecun-x.yaml",
+          "sha256": "38e47b3da8c17eac36d2fa9aaf922b1024a0f11c7a962d773f921464825f5a1b"
+        },
+        {
+          "path": "config/watch-sources/analysis/yeachan-clawhip-github-atom.yaml",
+          "sha256": "672e1a90e7ba62eb402da02aaa979ce5788c80b2f4e116a7b103e3ef465b250f"
+        },
+        {
+          "path": "config/watch-sources/analysis/yeachan-oh-my-claudecode-github-atom.yaml",
+          "sha256": "68e13da0a8c7489739601e289b30605ed5f12564258a56fd49d5ccb6531df09a"
+        },
+        {
+          "path": "config/watch-sources/analysis/yeachan-oh-my-codex-github-atom.yaml",
+          "sha256": "61b81932eb655465947743ad24b10a6035ca052bedf841f151aea7eed4b307b9"
+        },
+        {
+          "path": "config/watch-sources/analysis/yuha-han-openai-search-rss.yaml",
+          "sha256": "3d39e9a5f4a99b725c73c2f28ccb2f98f0a3a1c75543e7c436efa83f2d785919"
         },
         {
           "path": "config/watch-sources/media/mit-tech-review-ai.yaml",
@@ -318,7 +554,7 @@
         },
         {
           "path": "config/watch-sources/official/MANIFEST.yaml",
-          "sha256": "7ace50391286404e0a90df81c4597d84a525832c1faa405a6a9b6aac7bd0f30b"
+          "sha256": "41c505a6ad0fd16b958468f2ef44ef267ce2ddc007fdc702b1ce56a3459f5fb5"
         },
         {
           "path": "config/watch-sources/official/anthropic-news.yaml",
@@ -473,6 +709,34 @@
           "sha256": "85288fb12421327f03debc0da364a369f0c1a7b3fac5cc0fb99d9e1fdeda09a0"
         },
         {
+          "path": "docs/design/news-center-podcast-pipeline.md",
+          "sha256": "50daf23d3c83ecedfebaf4830e191636db83c471b76ea4628f2e238c7715586a"
+        },
+        {
+          "path": "docs/design/personal-intelligence-radar-coverage-gate.md",
+          "sha256": "71e6b393e522b1ead505bba85e7ff8fb4d0477dfc515b5b517acd84b25d38682"
+        },
+        {
+          "path": "docs/design/personal-radar-current-state-evidence-pack.md",
+          "sha256": "f2340ff538da65f1184bc7f701331163e4c338702f41157014b72d9f27ca11e5"
+        },
+        {
+          "path": "docs/design/personal-radar-source-pipelines.md",
+          "sha256": "c662c553e06cd13eaf4011be72506f49d3ae79d5108baf3b42939901edc731b0"
+        },
+        {
+          "path": "docs/design/personal-radar-wiki-data-contract.md",
+          "sha256": "79184334893453eb6248752275a714e12690d4a2a449f493a2b3e81dd94dae83"
+        },
+        {
+          "path": "docs/houroboros-discord-gateway.md",
+          "sha256": "4b8cc51d0407e5740ec0e29bb819c3af5969b635fc33142c70b94ee6e0a716fc"
+        },
+        {
+          "path": "docs/houroboros-workflow.md",
+          "sha256": "79deda20efe1ea973e7d1e5a7ed6a67bf396e320f727af79c7c8db562eff1e50"
+        },
+        {
           "path": "docs/plans/2026-04-20-all-mail-knowledge-lane.md",
           "sha256": "704aef44625526d494c288d971944d893c9cd5603ee59a911d0eae27bf2bea6c"
         },
@@ -495,6 +759,10 @@
         {
           "path": "docs/plans/2026-04-23-watch-source-onboarding-skill.md",
           "sha256": "63d4c23a7f735aa312e5dfbf5524ef0c45ab7767cb56611c3f66633348feafc6"
+        },
+        {
+          "path": "docs/plans/2026-04-30-jarvis-wiki-optimization-plan.md",
+          "sha256": "fb466052d280762e069860ebe966d5a6fe28efef01234a64ea74e0e257419ed0"
         },
         {
           "path": "docs/playbooks.md",
@@ -522,11 +790,11 @@
         },
         {
           "path": "docs/schema.md",
-          "sha256": "df54ca19295a8c84140c3f45eadfa99e8a14f3ca30e930d6fed3ed6a3cb65a91"
+          "sha256": "aead831577cc37ca6a82807dd8a0dced3ed894c05c7bd758783647501f9af216"
         },
         {
           "path": "pyproject.toml",
-          "sha256": "3d993c61e55a3e241473eb6ca7eb377fce25adca1c61487782aaa0da2a460c99"
+          "sha256": "26d144828ad37850be90f431a37d0028db771291ec6cdf62bb7429f9d00a387a"
         },
         {
           "path": "scripts/install.sh",
@@ -546,7 +814,7 @@
         },
         {
           "path": "src/jinwang_jarvis/bootstrap.py",
-          "sha256": "e7e35ee98adf3e890cfa76adc4c7f82925c9cc05d91c3f6759d47b59d33ac2b8"
+          "sha256": "7bd2da9068588c67cee6aa0904ffbea1506cd31cc95b4952cd58c48eb1e07a89"
         },
         {
           "path": "src/jinwang_jarvis/briefing.py",
@@ -562,7 +830,7 @@
         },
         {
           "path": "src/jinwang_jarvis/cli.py",
-          "sha256": "8b2204e2a5dce2ec31fc40853f76b390eb36a4d2156b7916bbec811318c514c2"
+          "sha256": "aca0c1083da7800d51ecfe1434b3d204332682f3c3a2b10b50fc1d2e704f745c"
         },
         {
           "path": "src/jinwang_jarvis/config.py",
@@ -581,16 +849,56 @@
           "sha256": "8c238c61cf74047043673ea64f4184f6368d8667b2e28dca4f8678504d4af737"
         },
         {
+          "path": "src/jinwang_jarvis/hermes_skill_context.py",
+          "sha256": "b74659dcccf4156e2be39b3acb92d7f3f52ccfac2c47e501470734989b6a49b7"
+        },
+        {
+          "path": "src/jinwang_jarvis/hermes_skill_lifecycle.py",
+          "sha256": "fd1061626b8029cde8b2afeb1bc513f47f53a0959843c8cd1bf3f6b6d14efec0"
+        },
+        {
+          "path": "src/jinwang_jarvis/hermes_skill_search.py",
+          "sha256": "c9da961badcf6c6f99bf1971da54875ee07a24a6999f28f9209b7ae273bb8083"
+        },
+        {
+          "path": "src/jinwang_jarvis/houroboros.py",
+          "sha256": "e17ee7729b271cc4870454667f88626a579ab5277e2e99eddd24d4c8511e5eb9"
+        },
+        {
           "path": "src/jinwang_jarvis/intelligence.py",
-          "sha256": "17706a0b825743a62ba1e7837603bcaa85f32d91756ad0f85373d9d1f21c2de3"
+          "sha256": "b0076a88d5a585579d55f69edb7a0aec7e1e4b5383092d9084bb5640e0a6eeea"
         },
         {
           "path": "src/jinwang_jarvis/knowledge.py",
-          "sha256": "469f07ec81561cef5f75f51cd75c8910976d924dd28216c337082060c7189d5d"
+          "sha256": "b97cbb974729b4c6c32de349c73c8f1b23889859ef26ec0b3aa304db57901177"
         },
         {
           "path": "src/jinwang_jarvis/mail.py",
           "sha256": "0f2a0423481f6384e0cd2fb48383634ec02c066694459f94fb9e8177ac0d0751"
+        },
+        {
+          "path": "src/jinwang_jarvis/news_center.py",
+          "sha256": "580112aecc0516368c0f8f40517558f4032520810210f877fd27237fd4986eed"
+        },
+        {
+          "path": "src/jinwang_jarvis/news_crawlers/__init__.py",
+          "sha256": "f96ce6a45182192f682acedc38bcb5536d5b3402dc295962d316c0213028653a"
+        },
+        {
+          "path": "src/jinwang_jarvis/news_crawlers/adapters.py",
+          "sha256": "df62d73df4ddd42cfd709476a632d0b96bd3464d7ed4b848c20197f12996de8d"
+        },
+        {
+          "path": "src/jinwang_jarvis/news_crawlers/collector.py",
+          "sha256": "819bcf7e1dda826d965204c244b581f177125877ddfd6b1909d410471cfd5c3f"
+        },
+        {
+          "path": "src/jinwang_jarvis/news_crawlers/models.py",
+          "sha256": "29ee0d46b2b97068c8ac03ab4ab3393efc6561bd31b9e987091ed5a129d4d41e"
+        },
+        {
+          "path": "src/jinwang_jarvis/personal_radar.py",
+          "sha256": "b9e1240aad7918d47bf32ec23cca05f63d6f881ea153c02fe0b9007621630e93"
         },
         {
           "path": "src/jinwang_jarvis/proposals.py",
@@ -602,19 +910,31 @@
         },
         {
           "path": "src/jinwang_jarvis/runtime.py",
-          "sha256": "48d7680c06aad15903a39cb28896ff832cddfad28f0ddd31fa64de1378165ad2"
+          "sha256": "a93b614dc002d853e7b5f8ad64c5a4de1a83c463206f021d5bc9878c63d519c6"
         },
         {
           "path": "src/jinwang_jarvis/styled_voice_samples.py",
           "sha256": "3a2717707cf513a9c87701297bd460e8bc98fca1f9810fa2499cca2c5d77c611"
         },
         {
+          "path": "src/jinwang_jarvis/unified_daily_report.py",
+          "sha256": "c47b836d5713f4a6d992a8ed837dbbc794e7e0ba522a82fdb9535b7f39a46580"
+        },
+        {
           "path": "src/jinwang_jarvis/watch.py",
-          "sha256": "891bd6296b81cada6bbff2d20a341debc7903c064439fd63d39e2383935214e4"
+          "sha256": "b7f4f26f2a50b654795ac86e9c973a77d31913bb7ccfdb477aadf696b1c4c4c2"
         },
         {
           "path": "src/jinwang_jarvis/wiki_contract.py",
-          "sha256": "0f3df1a5ef45ae7c2460b684c2e51bc140c3d7ecc97c91a97175c37a640f120c"
+          "sha256": "c2fd6551b077d100d8013f73beade791e7b5b9a2d73284937fee869d685725dd"
+        },
+        {
+          "path": "src/jinwang_jarvis/wiki_search.py",
+          "sha256": "be8a8b2bdf860154258875780e0bef9094c3a89dbc1d4201e913bff105fa7e26"
+        },
+        {
+          "path": "src/jinwang_jarvis/wiki_semantic_lint.py",
+          "sha256": "c9968e5bebd33426990993aa695db953fa95f22b4650ef234a38bf09c97c668e"
         },
         {
           "path": "tests/conftest.py",
@@ -622,7 +942,7 @@
         },
         {
           "path": "tests/test_bootstrap.py",
-          "sha256": "4c9c1e65bc96ffcd3221fe6d515cd17225f3d5e7baa1a6df03b89245a782eed2"
+          "sha256": "9e8f539634d28f99b110c1940273bbd02b7d21ef69a6c7dee89b0d85a3e3128d"
         },
         {
           "path": "tests/test_briefing.py",
@@ -646,11 +966,19 @@
         },
         {
           "path": "tests/test_cli.py",
-          "sha256": "c0e1be187f866df67fbfdc9c524a79babea2344af3568448827bf772bc549016"
+          "sha256": "960494278348ba3488842b7ab07054d07ff72aad166a4066391d3ed6901cd424"
         },
         {
           "path": "tests/test_config.py",
           "sha256": "756da125981b6ab9003a3f1f34d38f93d8e5019f13518b445504c10246c87663"
+        },
+        {
+          "path": "tests/test_daily_hot_issues_content_quality.py",
+          "sha256": "ea6a18acbbe99b3b9aac8575c21a77ca30a1563d89e3afeb359c30bdf4456f54"
+        },
+        {
+          "path": "tests/test_daily_hot_issues_pdf_renderer.py",
+          "sha256": "97660a450e840c404f52f2c63c8391a9e4771d0f0cef791a9e8884fa4a316acb"
         },
         {
           "path": "tests/test_feedback_review_backfill.py",
@@ -661,12 +989,32 @@
           "sha256": "9f20eb193bfa7e39ff74f087e35a9cd78803433f3ddb5d58583d9eb2c6390a32"
         },
         {
+          "path": "tests/test_hermes_skill_context.py",
+          "sha256": "9c490ad20bc2b7ae508a27383dcd3ed5f2789a9c98956b9bc02cdf03c78e77eb"
+        },
+        {
+          "path": "tests/test_hermes_skill_lifecycle.py",
+          "sha256": "dd989fbe0664cdfbdca58f1b3d2a3cc43aa2767eff4f125b2434730d190b560f"
+        },
+        {
+          "path": "tests/test_hermes_skill_search.py",
+          "sha256": "6e4633ccb996929349065091d8f21d25174a939040995d45ffbd2a481adb659b"
+        },
+        {
+          "path": "tests/test_hooo_gateway_plugin.py",
+          "sha256": "130943fa2b5914037ae20656eaf8566d94a1d5820734b2b0e3c1907709b025b8"
+        },
+        {
+          "path": "tests/test_houroboros.py",
+          "sha256": "8bf8a1b81a3d3f0a89cdd54e0e4b5aae7e3f8cf647f3d06da12b8330749d641b"
+        },
+        {
           "path": "tests/test_intelligence.py",
-          "sha256": "cdb525da294edeabf3bac53578c6eeaa5edcffef49fe61de45374b5f8453b4aa"
+          "sha256": "4fd4a15f42a97b2d8cc56853e2d070ac298369deef7b905e6710e5208b6d12bc"
         },
         {
           "path": "tests/test_knowledge.py",
-          "sha256": "c119485dd259ea7e6e4bb41232c2daf7c9be3eb9288114705f65fd68ee7a9edd"
+          "sha256": "05dfe21eade6aa9b2ed7b8af6d26c5e1831f7e9b3e53d82eb73e46e38bf919fe"
         },
         {
           "path": "tests/test_mail_collection.py",
@@ -677,20 +1025,52 @@
           "sha256": "e73758561fa485f067a5fd2180cea09752f5030036c807f1685549cd68afd25d"
         },
         {
+          "path": "tests/test_news_center.py",
+          "sha256": "2b1316439bf44213f0b28eb41a150432822daef0260cb37a8f08d7edfdf8ba7f"
+        },
+        {
+          "path": "tests/test_news_center_cli.py",
+          "sha256": "0a6fa5b41f357256365d11a54d275c667db927fe491f6c286925e5b5df6b5681"
+        },
+        {
+          "path": "tests/test_news_crawlers.py",
+          "sha256": "042dc21feb52d5abb197c85285e6e709ebe5a9e37d846e450d96b1fcde23241e"
+        },
+        {
+          "path": "tests/test_personal_radar_design.py",
+          "sha256": "2cfa1f292d1ed54e88d4b0c6c1681c7a3bb069f7735cabc5fae03ee4f5a5fffa"
+        },
+        {
           "path": "tests/test_proposals.py",
           "sha256": "2794294ea6069ede675d82feeeea1fafd4c58acc152c34f3d760be0b3af122ca"
         },
         {
           "path": "tests/test_runtime.py",
-          "sha256": "8bd3229bb25232d06f6894943b31e1f4073ee861745b5db226e8e050c903b45b"
+          "sha256": "b950172611e2d44681c51a25f71db65a8af2cef0024c6bbdfc86ce9f5d843b9f"
         },
         {
           "path": "tests/test_styled_voice_samples.py",
           "sha256": "d08761f422b18d814ef2571cc3804c357287c7ea454fb7101318878e8def10f7"
         },
         {
+          "path": "tests/test_unified_daily_report.py",
+          "sha256": "befd350a2e0248d678f212ab38c1e10809248d4e96a376c55b6cf563f894099d"
+        },
+        {
           "path": "tests/test_watch.py",
-          "sha256": "9354b2d752eadd710d46e01f49702c57c35b78249e9ae621ec5f84294810ccea"
+          "sha256": "55159cf436348c9c34101328363a7163912c61b251f42490a1d9d283270ecb6a"
+        },
+        {
+          "path": "tests/test_wiki_contract.py",
+          "sha256": "33d5f5a4029777bb9227d6b0c6adacf05162af508519c5d3c6b3abac9c542946"
+        },
+        {
+          "path": "tests/test_wiki_search.py",
+          "sha256": "1ea4af0b54a2dab6762cac8aa25bf649c49b622f9f75065a004a3172e06b6ae8"
+        },
+        {
+          "path": "tests/test_wiki_semantic_lint.py",
+          "sha256": "90485fad653faa29ef28cef922436df8834bc8046fcba35b4384a8741af37118"
         }
       ],
       "apply_order": 40,

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26T02:36:17.148682+00:00",
+  "generated_at": "2026-05-02T15:06:17.247983+00:00",
   "lock_path": "/home/jinwang/workspace/hermes-safe-restart-bundle/customization-lock.yaml",
   "snapshot_path": "/home/jinwang/workspace/hermes-safe-restart-bundle/reports/customization-lock.snapshot.json",
   "hermes_repo": "/home/jinwang/.hermes/hermes-agent",
@@ -15,8 +15,8 @@
   },
   "managed_hermes_paths": [],
   "ignored_untracked_paths": [],
-  "hermes_head": "7c17accb29bcff13923a8dbb76a4661ba17fe5ad",
-  "origin_main_head": "7c17accb29bcff13923a8dbb76a4661ba17fe5ad",
+  "hermes_head": "5d3be898a8671eb9fb99cf18f43165502f54e7f4",
+  "origin_main_head": "5d3be898a8671eb9fb99cf18f43165502f54e7f4",
   "origin_main_tree_diff": [],
   "hermes_status": [],
   "unmanaged_dirty_paths": [],
@@ -44,8 +44,8 @@
     {
       "bundle_id": "hermes-safe-restart-bundle",
       "manifest_path": "/home/jinwang/workspace/hermes-safe-restart-bundle/manifests/bundles/hermes-safe-restart-bundle.yaml",
-      "expected_source_digest": "8d215f44d5c836f08ce962eed95d90ab443b2df0148bd2660d38b2b5d475d2f6",
-      "current_source_digest": "8d215f44d5c836f08ce962eed95d90ab443b2df0148bd2660d38b2b5d475d2f6",
+      "expected_source_digest": "d9e0dd5e9aa6448618291ca00804c393c95b482f1e2e2c9632fe4adafa848d24",
+      "current_source_digest": "d9e0dd5e9aa6448618291ca00804c393c95b482f1e2e2c9632fe4adafa848d24",
       "mismatch": false,
       "target": "ops-skill",
       "managed_hermes_paths": []
@@ -53,8 +53,8 @@
     {
       "bundle_id": "jinwang-jarvis",
       "manifest_path": "/home/jinwang/workspace/hermes-safe-restart-bundle/manifests/bundles/jinwang-jarvis.yaml",
-      "expected_source_digest": "d498624725d5435eff9a3b4d1d84fdf6f795032b29f83bf2e9eafd0f8b95ec36",
-      "current_source_digest": "d498624725d5435eff9a3b4d1d84fdf6f795032b29f83bf2e9eafd0f8b95ec36",
+      "expected_source_digest": "f684082bb4522e5223a36bdc830768a5497e161ee65321c59eb8d99e2dae7429",
+      "current_source_digest": "f684082bb4522e5223a36bdc830768a5497e161ee65321c59eb8d99e2dae7429",
       "mismatch": false,
       "target": "sidecar",
       "managed_hermes_paths": []

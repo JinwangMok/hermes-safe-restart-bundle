@@ -34,8 +34,10 @@ cd ~/workspace/hermes-safe-restart-bundle
 ## User-commanded update/restart reporting convention
 For any user-commanded `hermes update` → source-untouched external bundle install/verify → gateway restart flow:
 1. Before restart, ensure Discord receives the standard warning: `⚠️ Gateway restarting — Your current task will be interrupted. Send any message after restart and I'll try to resume where you left off.`
-2. After the gateway is active again, send Jinwang a concise "what changed" report as the success signal. Include upstream commit/update status, skill sync changes, external bundle install/verify results, config migration skips, and gateway active state.
-3. If the restart interrupts the agent before automatic delivery succeeds, recover the latest log from `~/workspace/hermes-safe-restart-bundle/reports/` on the next user message and send the report immediately.
+2. Before any gateway stop/restart/update-restart, arm an external OpenCode recovery safety-belt: start a separate shell/tmux/process that sleeps 180 seconds, then checks `hermes-gateway.service`, restarts it only if inactive/failed, writes `~/.hermes/recovery/latest-opencode-recovery.report`, and reports back to the origin Discord thread. For long update/reinstall flows, 300 seconds is acceptable, but 180 seconds is Jinwang's default requirement.
+3. The recovery prompt must include the current Discord guild, parent channel, thread, restart purpose, and minimal checks: `systemctl --user is-active hermes-gateway.service`, `systemctl --user show hermes-gateway.service -p MainPID -p ActiveState --no-pager`, and `journalctl --user -u hermes-gateway.service -n 120 --no-pager`. If active, do not restart unnecessarily.
+4. After the gateway is active again, send Jinwang a concise "what changed" report as the success signal. Include upstream commit/update status, skill sync changes, external bundle install/verify results, config migration skips, and gateway active state.
+5. If the restart interrupts the agent before automatic delivery succeeds, recover the latest log from `~/workspace/hermes-safe-restart-bundle/reports/` and `~/.hermes/recovery/latest-opencode-recovery.report` on the next user message and send the report immediately.
 
 ## Post-update RCA and recovery checklist
 When `hermes-agent-update-all-bundles.sh` or a manual Hermes update/restart appears to complete but the user gets no reply:
