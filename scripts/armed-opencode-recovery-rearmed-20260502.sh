@@ -10,7 +10,7 @@ PROMPT="/ulw 현재 hermes gateway 상태 확인 후 멈췄으면 실패 근본 
   sleep 300
   echo "[$(date -Is)] starting opencode recovery worker with model fallback"
   cd "$HOME/.hermes/hermes-agent"
-  for MODEL in openai/gpt-5.4-mini openai/gpt-5.5-fast openrouter/deepseek/deepseek-chat-v3.2 openrouter/google/gemini-2.5-flash; do
+  for MODEL in openai/gpt-5.5; do
     echo "[$(date -Is)] trying model=$MODEL"
     if opencode run -m "$MODEL" "$PROMPT"; then
       echo "[$(date -Is)] opencode recovery worker succeeded model=$MODEL"
